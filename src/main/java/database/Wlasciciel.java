@@ -14,14 +14,21 @@ public class Wlasciciel {
     private String imie_wlasciciela;
     @Column(name = "nazwisko_wlasciciela")
     private String nazwisko_wlasciciela;
-    @Column(name = "id_naprawy")
-    private String id_naprawy;
+    @Column(name = "marka_samochodu_wlasciciela")
+    private String marka_samochodu_wlasciciela;
+    @Column(name = "model_samochodu_wlasciciela")
+    private String model_samochodu_wlasciciela;
 
-    public Wlasciciel(int id_wlasciciela, String imie_wlasciciela, String nazwisko_wlasciciela, String id_naprawy) {
+
+    public Wlasciciel(){
+    }
+
+    public Wlasciciel(int id_wlasciciela, String imie_wlasciciela, String nazwisko_wlasciciela, String marka_samochodu_wlasciciela, String model_samochodu_wlasciciela) {
         this.id_wlasciciela = id_wlasciciela;
         this.imie_wlasciciela = imie_wlasciciela;
         this.nazwisko_wlasciciela = nazwisko_wlasciciela;
-        this.id_naprawy = id_naprawy;
+        this.marka_samochodu_wlasciciela = marka_samochodu_wlasciciela;
+        this.model_samochodu_wlasciciela = model_samochodu_wlasciciela;
     }
 
     public int getId_wlasciciela() {
@@ -48,12 +55,20 @@ public class Wlasciciel {
         this.nazwisko_wlasciciela = nazwisko_wlasciciela;
     }
 
-    public String getId_naprawy() {
-        return id_naprawy;
+    public String getMarka_samochodu_wlasciciela() {
+        return marka_samochodu_wlasciciela;
     }
 
-    public void setId_naprawy(String id_naprawy) {
-        this.id_naprawy = id_naprawy;
+    public void setMarka_samochodu_wlasciciela(String marka_samochodu_wlasciciela) {
+        this.marka_samochodu_wlasciciela = marka_samochodu_wlasciciela;
+    }
+
+    public String getModel_samochodu_wlasciciela() {
+        return model_samochodu_wlasciciela;
+    }
+
+    public void setModel_samochodu_wlasciciela(String model_samochodu_wlasciciela) {
+        this.model_samochodu_wlasciciela = model_samochodu_wlasciciela;
     }
 
     @Override
@@ -62,7 +77,8 @@ public class Wlasciciel {
                 "id_wlasciciela=" + id_wlasciciela +
                 ", imie_wlasciciela='" + imie_wlasciciela + '\'' +
                 ", nazwisko_wlasciciela='" + nazwisko_wlasciciela + '\'' +
-                ", id_naprawy='" + id_naprawy + '\'' +
+                ", marka_samochodu_wlasciciela='" + marka_samochodu_wlasciciela + '\'' +
+                ", model_samochodu_wlasciciela='" + model_samochodu_wlasciciela + '\'' +
                 '}';
     }
 }

@@ -6,8 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Egzemplarz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Egzemplarz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/Egzemplarz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/Egzemplarz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addWypozyczenia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addWypozyczenia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/del/delMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/del/delMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/connect/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/DbConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Naprawa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Naprawa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Usluga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Usluga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Wlasciciel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Wlasciciel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/add/addMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/add/addMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/add/addWypozyczenia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/add/addWypozyczenia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/del/delMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/del/delMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/connect/DbConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/connect/DbConnect.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +43,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1myse6sJjx3oKVbiDVqKrHHsrVL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,8 +58,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/FXML/del" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zeushere\Desktop\warsztatSamochodowy_Roda\src\main\resources\FXML\del" />
+      <recent name="C:\Users\zeushere\Desktop\warsztatSamochodowy_Roda\src\main\resources\FXML\add" />
+      <recent name="C:\Users\zeushere\Desktop\warsztatSamochodowy_Roda\src\main\resources\FXML" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="config" />
+      <recent name="config.del" />
+      <recent name="config.add" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -80,7 +114,7 @@
       <workItem from="1611219254269" duration="74000" />
       <workItem from="1611219789153" duration="20000" />
       <workItem from="1611220359497" duration="3000" />
-      <workItem from="1611220607381" duration="1804000" />
+      <workItem from="1611220607381" duration="23125000" />
     </task>
     <servers />
   </component>
@@ -98,5 +132,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

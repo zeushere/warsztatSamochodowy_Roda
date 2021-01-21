@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DbConnect {
     protected Connection connection;
     public Connection getConnection(){
-        final String connectionString="jdbc:mysql://localhost:3306/wypozyczalnia_rowerow";
+        final String connectionString="jdbc:mysql://localhost:3306/warsztat_samochodowy";
         try {
             connection = DriverManager.getConnection(connectionString,"root", "");
         } catch (SQLException throwables) {

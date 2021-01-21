@@ -12,13 +12,13 @@ public class delMenu {
     @FXML
     private Pane pane;
 
-    public void klient(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delKlient.fxml"));
+    public void usluga(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delUsluga.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
-    public void pracownik(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delPracownik.fxml"));
+    public void wlasciciel(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delWlasciciel.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 

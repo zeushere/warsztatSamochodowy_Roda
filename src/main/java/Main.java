@@ -13,7 +13,7 @@ public class Main extends Application {
         AnchorPane anchorPane = fxmlLoader.load();
         Scene scene = new Scene(anchorPane);
         stage.setScene(scene);
-        stage.setTitle("Wypożyczalnia rowerów");
+        stage.setTitle("Warsztat Samochodowy");
         stage.show();
     }
 }

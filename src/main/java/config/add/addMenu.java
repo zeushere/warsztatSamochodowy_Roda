@@ -13,18 +13,18 @@ public class addMenu {
     @FXML
     private Pane pane;
 
-    public void klient(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addKlient.fxml"));
+    public void usluga(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addUsluga.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
-    public void pracownik(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addPracownik.fxml"));
+    public void wlasciciel(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addWlasciciel.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
-    public void producent(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addProducent.fxml"));
+    public void naprawa(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addNaprawa.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 

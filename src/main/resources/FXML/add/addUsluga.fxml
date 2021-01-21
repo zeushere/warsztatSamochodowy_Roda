@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.add.addUsluga">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="uslugaAddNazwa" layoutX="126.0" layoutY="71.0" />
+            <TextField fx:id="uslugaAddRodzaj" layoutX="126.0" layoutY="127.0" />
+            <Text layoutX="126.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa usługi" />
+            <Text layoutX="126.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rodzaj usługi" />
+            <Button layoutX="126.0" layoutY="167.0" mnemonicParsing="false" onAction="#addUsluga" text="Dodaj usługę" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

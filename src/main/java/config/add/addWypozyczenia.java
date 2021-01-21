@@ -84,7 +84,7 @@ public class addWypozyczenia implements Initializable {
         }
     }
 
-    public void wypozyczeniaAdd(ActionEvent actionEvent) throws SQLException{
+    public void naprawaAdd(ActionEvent actionEvent) throws SQLException{
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
         int idKlienta = (int) listKlient.get(wypozyczeniaSelectKlient.getSelectionModel().getSelectedIndex());

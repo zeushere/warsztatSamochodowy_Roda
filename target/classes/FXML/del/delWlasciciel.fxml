@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.del.delWlasciciel">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <ComboBox fx:id="wlascicielSelect" layoutX="125.0" layoutY="58.0" prefWidth="150.0" />
+            <Text layoutX="125.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz właściciela do usunięcia" />
+            <Button layoutX="125.0" layoutY="114.0" mnemonicParsing="false" onAction="#wlascicielDel" text="Usuń" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

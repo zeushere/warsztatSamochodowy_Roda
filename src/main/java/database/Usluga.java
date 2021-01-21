@@ -14,13 +14,20 @@ public class Usluga {
     private String nazwa_uslugi;
     @Column(name = "rodzaj_uslugi")
     private String rodzaj_uslugi;
+    @Column(name = "PImNa")
+    private String PImNa;
 
 
 
-    public Usluga(int id_uslugi, String nazwa_uslugi, String rodzaj_uslugi) {
+    public Usluga() {
+
+    }
+
+    public Usluga(int id_uslugi, String nazwa_uslugi, String rodzaj_uslugi, String pImNa) {
         this.id_uslugi = id_uslugi;
         this.nazwa_uslugi = nazwa_uslugi;
         this.rodzaj_uslugi = rodzaj_uslugi;
+        this.PImNa = pImNa;
     }
 
     public int getId_uslugi() {
@@ -47,6 +54,14 @@ public class Usluga {
         this.rodzaj_uslugi = rodzaj_uslugi;
     }
 
+    public String getPImNa() {
+        return PImNa;
+    }
+    public void setPImNa(String pImNa)
+    {
+        this.PImNa = pImNa;
+    }
+
     @Override
     public String toString() {
         return "Usluga{" +
@@ -55,4 +70,6 @@ public class Usluga {
                 ", rodzaj_uslugi='" + rodzaj_uslugi + '\'' +
                 '}';
     }
+
+
 }

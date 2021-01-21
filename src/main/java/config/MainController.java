@@ -14,18 +14,18 @@ public class MainController {
     @FXML
     private Pane wyswietl;
 
-    public void klientTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/klient.fxml"));
+    public void uslugaTable(javafx.event.ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
     }
 
-    public void pracTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/pracownik.fxml"));
+    public void wlascicelTable(javafx.event.ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
     }
 
-    public void prodTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/producent.fxml"));
+    public void naprawaTable(javafx.event.ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
     }
 
