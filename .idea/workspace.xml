@@ -6,27 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addWypozyczenia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addWypozyczenia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/config/del/delMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/del/delMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/connect/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/DbConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Naprawa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Naprawa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Usluga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Usluga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Wlasciciel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Wlasciciel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/del/delNaprawa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/del/delNaprawa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delNaprawa.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/add/addMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/add/addMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/add/addWypozyczenia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/add/addWypozyczenia.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config/del/delMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/del/delMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/connect/DbConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/connect/DbConnect.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +99,7 @@
       <workItem from="1611219254269" duration="74000" />
       <workItem from="1611219789153" duration="20000" />
       <workItem from="1611220359497" duration="3000" />
-      <workItem from="1611220607381" duration="23125000" />
+      <workItem from="1611220607381" duration="24569000" />
     </task>
     <servers />
   </component>

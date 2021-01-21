@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.geometry.Insets?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="config.del.delMenu"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.del.delMenu">
     <children>
         <VBox prefHeight="400.0" prefWidth="200.0">
             <children>
@@ -24,7 +18,7 @@
                         <Insets bottom="20.0" left="25.0" right="25.0" top="30.0" />
                     </VBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#producent" prefWidth="150.0" text="Producent">
+                <Button mnemonicParsing="false" onAction="#naprawa" prefWidth="150.0" text="Naprawa">
                     <VBox.margin>
                         <Insets bottom="20.0" left="25.0" right="25.0" top="30.0" />
                     </VBox.margin>

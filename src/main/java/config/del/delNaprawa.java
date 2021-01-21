@@ -16,47 +16,47 @@ import java.util.ResourceBundle;
 public class delNaprawa implements Initializable {
 
     @FXML
-    private ComboBox wypozyczenieSelect;
+    private ComboBox naprawaSelect;
     
     private Connection connection;
-    ArrayList listWypozyczenie = new ArrayList();
+    ArrayList listNaprawa = new ArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        wypozyczenieSelect();
+        naprawaSelect();
     }
 
-    private void wypozyczenieSelect() {
+    private void naprawaSelect() {
         try {
             DbConnect dbConnect = new DbConnect();
             connection = dbConnect.getConnection();
-            String query = "SELECT *,CONCAT('Klient: ',klient.imie,' '," +
-                    "klient.nazwisko," +
-                    "', rower: ',egzemplarz.rodzaj,', ',egzemplarz.firma," +
-                    "', data wypożyczenia: ',data_wypozyczenia," +
-                    "', data oddania: ',data_zwrotu)as wypo " +
-                    "FROM wypozyczenie INNER JOIN klient ON wypozyczenie.id_klienta=klient.id_klienta" +
-                    " INNER JOIN egzemplarz ON wypozyczenie.id_egzemplarza=egzemplarz.id_egzemplarza";
+            String query = "SELECT *,CONCAT('Wlasciciel: ',wlasciciel.imie_wlasciciela,' '," +
+                    "wlasciciel.nazwisko_wlasciciela," +
+                    "', Usługa: ',usluga.nazwa_uslugi,', ',usluga.rodzaj_uslugi," +
+                    "', Koszt naprawy: ',koszt_naprawy,'zł' "  +
+                    "', Data naprawy: ',data_naprawy)as naprawa " +
+                    "FROM naprawa INNER JOIN wlasciciel ON naprawa.id_wlasciciela=wlasciciel.id_wlasciciela" +
+                    " INNER JOIN usluga ON naprawa.id_uslugi=usluga.id_uslugi";
             ResultSet rs = connection.createStatement().executeQuery(query);
             while (rs.next()) {
-                wypozyczenieSelect.getItems().add(rs.getString("wypo"));
-                listWypozyczenie.add(rs.getInt("id_wypozyczenia"));
+                naprawaSelect.getItems().add(rs.getString("naprawa"));
+                listNaprawa.add(rs.getInt("id_naprawy"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
 
-    public void wypozyczenieDel(ActionEvent actionEvent) throws SQLException{
-        int id = (int) listWypozyczenie.get(wypozyczenieSelect.getSelectionModel().getSelectedIndex());
+    public void naprawaDelete(ActionEvent actionEvent) throws SQLException{
+        int id = (int) listNaprawa.get(naprawaSelect.getSelectionModel().getSelectedIndex());
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
-        String query = "DELETE FROM wypozyczenie WHERE id_wypozyczenia="+id;
+        String query = "DELETE FROM naprawa WHERE id_naprawy="+id;
         int ex = connection.createStatement().executeUpdate(query);
         if(ex>0){
-            listWypozyczenie.clear();
-            wypozyczenieSelect.getItems().clear();
-            wypozyczenieSelect();
+            listNaprawa.clear();
+            naprawaSelect.getItems().clear();
+            naprawaSelect();
         }
     }
 }

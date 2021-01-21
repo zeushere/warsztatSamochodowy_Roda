@@ -22,8 +22,8 @@ public class delMenu {
         pane.getChildren().setAll(anchorPane);
     }
 
-    public void producent(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delProducent.fxml"));
+    public void naprawa(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delNaprawa.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
