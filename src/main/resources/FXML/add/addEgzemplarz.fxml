@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.add.addEgzemplarz">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="egzemplarzAddRodzaj" layoutX="126.0" layoutY="56.0" />
+            <TextField fx:id="egzemplarzAddFirma" layoutX="126.0" layoutY="120.0" />
+            <Text layoutX="126.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rodzaj" />
+            <Text layoutX="126.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Firma" />
+            <Text layoutX="123.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data produkcji" />
+            <Text layoutX="126.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz producenta" />
+            <DatePicker fx:id="egzemplarzAddData" layoutX="126.0" layoutY="188.0" />
+            <ComboBox fx:id="egzemplarzAddProducent" layoutX="125.0" layoutY="247.0" prefWidth="150.0" />
+            <Button layoutX="126.0" layoutY="301.0" mnemonicParsing="false" onAction="#egzemplarzAdd" text="Dodaj" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

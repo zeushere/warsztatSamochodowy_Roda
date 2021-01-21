@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.add.addWypozyczenia">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <ComboBox fx:id="wypozyczeniaSelectKlient" layoutX="125.0" layoutY="48.0" prefWidth="150.0" />
+            <ComboBox fx:id="wypozyczeniaSelectEgzemplarz" layoutX="125.0" layoutY="122.0" prefWidth="150.0" />
+            <ComboBox fx:id="wypozyczeniaSelectPracownik" layoutX="125.0" layoutY="188.0" prefWidth="150.0" />
+            <DatePicker fx:id="wypozyczeniaData" layoutX="125.0" layoutY="255.0" />
+            <Button layoutX="125.0" layoutY="312.0" mnemonicParsing="false" onAction="#wypozyczeniaAdd" text="Dodaj" />
+            <Text layoutX="125.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klient" />
+            <Text layoutX="125.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Egzemplarz" />
+            <Text layoutX="125.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pracownik" />
+            <Text layoutX="125.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data oddania" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

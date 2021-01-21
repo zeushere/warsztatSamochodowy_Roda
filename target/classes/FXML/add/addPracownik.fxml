@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.add.addPracownik">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="pracownikAddImie" layoutX="126.0" layoutY="56.0" />
+            <TextField fx:id="pracownikAddNazwisko" layoutX="126.0" layoutY="118.0" />
+            <TextField fx:id="pracownikAddWynagrodzenie" layoutX="126.0" layoutY="240.0" />
+            <Text layoutX="126.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie" />
+            <Text layoutX="126.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
+            <Text layoutX="126.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wynagrodzenie" />
+            <Text layoutX="126.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data zatrudnienia" />
+            <DatePicker fx:id="pracownikAddData" layoutX="126.0" layoutY="177.0" />
+            <Button layoutX="125.0" layoutY="285.0" mnemonicParsing="false" onAction="#pracownikAdd" text="Dodaj" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
