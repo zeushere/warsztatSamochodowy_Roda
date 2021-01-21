@@ -3,6 +3,7 @@ package database;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 public class Egzemplarz {
     @Id
