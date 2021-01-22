@@ -6,6 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addNaprawa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addNaprawa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/update/updateMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/update/updateMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/add/addNaprawa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/add/addNaprawa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/update/updateMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/update/updateMenu.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +49,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/FXML/del" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/FXML/update" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zeushere\Desktop\warsztatSamochodowy_Roda\src\main\resources\FXML\update" />
       <recent name="C:\Users\zeushere\Desktop\warsztatSamochodowy_Roda\src\main\resources\FXML\del" />
       <recent name="C:\Users\zeushere\Desktop\warsztatSamochodowy_Roda\src\main\resources\FXML\add" />
       <recent name="C:\Users\zeushere\Desktop\warsztatSamochodowy_Roda\src\main\resources\FXML" />

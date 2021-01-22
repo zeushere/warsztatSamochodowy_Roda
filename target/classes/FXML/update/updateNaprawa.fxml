@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.update.updateNaprawa">
+   <children>
+      <Pane layoutX="-3.0">
+         <children>
+            <ComboBox fx:id="selectNaprawa" layoutX="121.0" layoutY="129.0" onAction="#selectNaprawaAction" prefWidth="150.0" />
+            <DatePicker fx:id="naprawaUpdateDataNaprawy" layoutX="121.0" layoutY="272.0" />
+            <Button fx:id="naprawaUpdateButton" layoutX="125.0" layoutY="324.0" mnemonicParsing="false" onAction="#naprawaUpdate" text="Aktualizuj naprawę" />
+            <Text layoutX="123.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz naprawę do aktualizacji" />
+            <Text layoutX="122.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="125.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data naprawy" />
+            <Text layoutX="123.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koszt naprawy" />
+            <TextField fx:id="naprawaUpdateKosztNaprawy" layoutX="122.0" layoutY="208.0" />
+            <CheckBox fx:id="updateCheckboxKosztNaprawy" layoutX="279.0" layoutY="212.0" mnemonicParsing="false" onAction="#checkBoxKosztNaprawy" />
+            <CheckBox fx:id="updateCheckboxDataNaprawy" layoutX="352.0" layoutY="276.0" mnemonicParsing="false" onAction="#checkBoxDataNaprawy" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

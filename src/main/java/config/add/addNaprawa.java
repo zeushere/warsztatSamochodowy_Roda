@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class addNaprawa implements Initializable {
-    
+
     @FXML
     private ComboBox naprawaSelectWlasciciel;
     @FXML
@@ -36,7 +36,6 @@ public class addNaprawa implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         naprawaSelectWlasciciel();
         naprawaSelectUsluga();
-
 
     }
 
@@ -80,7 +79,6 @@ public class addNaprawa implements Initializable {
         LocalDate dataNaprawy = naprawaData.getValue();
 
         if ((data.isBefore(dataNaprawy)) || data.isEqual(dataNaprawy)){
-            System.out.println(naprawaKoszt.getText());
             String query = "INSERT INTO naprawa(koszt_naprawy,data_naprawy,id_wlasciciela,id_uslugi) VALUES ('"
                     +naprawaKoszt.getText()+"','"
                     +dataNaprawy+"','"
@@ -99,7 +97,7 @@ public class addNaprawa implements Initializable {
 
             }
         } else {
-            System.out.println("elo");
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Ustaw poprawnie datę oddania (nie może być wcześniejsza niż aktualna)");

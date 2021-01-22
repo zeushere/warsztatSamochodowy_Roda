@@ -23,16 +23,6 @@
                         <Insets bottom="20.0" left="25.0" right="25.0" top="30.0" />
                     </VBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#egzemplarz" prefWidth="150.0" text="Egzemplarz">
-                    <VBox.margin>
-                        <Insets bottom="20.0" left="25.0" right="25.0" top="30.0" />
-                    </VBox.margin>
-                </Button>
-                <Button mnemonicParsing="false" onAction="#wypozyczenia" prefWidth="150.0" text="Wypożyczenia">
-                    <VBox.margin>
-                        <Insets bottom="20.0" left="25.0" right="25.0" top="30.0" />
-                    </VBox.margin>
-                </Button>
             </children>
         </VBox>
         <Pane fx:id="pane" layoutX="200.0" prefHeight="400.0" prefWidth="400.0" />

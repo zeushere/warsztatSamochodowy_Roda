@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.MainController">
     <children>
-        <HBox prefHeight="45.0" prefWidth="1200.0">
+        <HBox prefHeight="125.0" prefWidth="1200.0">
             <children>
                 <Button mnemonicParsing="false" onAction="#uslugaTable" prefWidth="150.0" text="Usługa">
                     <HBox.margin>
@@ -45,6 +45,6 @@
             </Button>
             </children>
         </HBox>
-        <Pane fx:id="wyswietl" layoutY="65.0" prefHeight="372.0" prefWidth="1200.0" />
+        <Pane fx:id="wyswietl" layoutY="162.0" prefHeight="275.0" prefWidth="1200.0" />
     </children>
 </AnchorPane>

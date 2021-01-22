@@ -31,7 +31,7 @@ public class MainController {
 
     public void update(javafx.event.ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/FXML/add/updateMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/FXML/update/updateMenu.fxml"));
         AnchorPane anchorPane = fxmlLoader.load();
         Scene scene = new Scene(anchorPane);
         stage.setScene(scene);
