@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.WlascicielController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.WlascicielController">
    <children>
-      <TableView fx:id="wlascicielTab" prefWidth="1200.0">
+      <TableView fx:id="wlascicielTab" layoutX="6.0" prefWidth="1200.0">
         <columns>
           <TableColumn fx:id="wlascicielImie" minWidth="236.80005490779877" prefWidth="236.80005490779877" text="Imie wlaściciela" />
           <TableColumn fx:id="wlascicielNazwisko" minWidth="140.79998779296875" prefWidth="272.79998779296875" text="Nazwisko właściciela" />

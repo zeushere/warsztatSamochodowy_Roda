@@ -27,7 +27,14 @@ public class MainController {
     @FXML
     private Pane searchPane;
 
+    @FXML
+    private TextField searchTextField;
+
     public int wywolanieTabeli = 0;
+
+    public  double heightWyswietl;
+
+
 
 
     public void uslugaTable(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -62,9 +69,14 @@ public class MainController {
 
         if(wywolanieTabeli == 2)
         {
-            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
+            anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
             wyswietl.getChildren().setAll(anchorPane);
+
+            heightWyswietl = wyswietl.getLayoutY();
+
+            wyswietl.setLayoutY(wyswietl.getLayoutY()+77);
             searchPane.setVisible(true);
+
 
         }
 
@@ -72,14 +84,20 @@ public class MainController {
         {
             AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
             wyswietl.getChildren().setAll(anchorPane);
-            searchPane.setVisible(true);
+            heightWyswietl = wyswietl.getLayoutY();
 
+            wyswietl.setLayoutY(wyswietl.getLayoutY()+77);
+            searchPane.setVisible(true);
         }
 
         else if(wywolanieTabeli == 1)
         {
             AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
             wyswietl.getChildren().setAll(anchorPane);
+            heightWyswietl = wyswietl.getLayoutY();
+
+            wyswietl.setLayoutY(wyswietl.getLayoutY()+77);
+            searchPane.setVisible(true);
 
         }
 
@@ -89,8 +107,9 @@ public class MainController {
             alert.setTitle("Błąd!");
             alert.setHeaderText("Nie wybrałeś żadnej tabeli!");
             alert.showAndWait();
-
         }
+
+
 
     }
 
@@ -114,6 +133,37 @@ public class MainController {
         stage.show();
     }
 
-    public void searchContent(ActionEvent actionEvent) {
+    public void searchFromTableAction(ActionEvent actionEvent) throws IOException {
+
+        if(wywolanieTabeli == 2)
+        {
+            anchorPane = FXMLLoader.load(getClass().getResource("/FXML/search/searchWlasciciel.fxml"));
+            wyswietl.getChildren().setAll(anchorPane);
+            wyswietl.setLayoutY(heightWyswietl);
+
+            searchPane.setVisible(false);
+
+        }
+
+        else if(wywolanieTabeli == 3)
+        {
+            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/search/searchNaprawa.fxml"));
+            wyswietl.getChildren().setAll(anchorPane);
+            wyswietl.setLayoutY(heightWyswietl);
+
+            searchPane.setVisible(false);
+        }
+
+        else if(wywolanieTabeli == 1)
+        {
+            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/search/searchUsluga.fxml"));
+            wyswietl.getChildren().setAll(anchorPane);
+            wyswietl.setLayoutY(heightWyswietl);
+
+            searchPane.setVisible(false);
+
+        }
+
     }
+
 }

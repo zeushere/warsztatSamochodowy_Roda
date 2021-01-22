@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.search.searchUsluga">
+    <children>
+        <TableView fx:id="uslugaTab" prefWidth="1200.0">
+            <columns>
+                <TableColumn fx:id="uslugaNazwa" minWidth="400.0" prefWidth="844.399954199791" text="Nazwa uslugi" />
+                <TableColumn fx:id="uslugaRodzaj" minWidth="400.0" prefWidth="354.4000244140625" text="Rodzaj uslugi" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
