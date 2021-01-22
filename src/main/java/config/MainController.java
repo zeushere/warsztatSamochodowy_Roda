@@ -29,13 +29,18 @@ public class MainController {
         wyswietl.getChildren().setAll(anchorPane);
     }
 
-    public void egzTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/egzemplarz.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+    public void update(javafx.event.ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/FXML/add/updateMenu.fxml"));
+        AnchorPane anchorPane = fxmlLoader.load();
+        Scene scene = new Scene(anchorPane);
+        stage.setScene(scene);
+        stage.setTitle("Aktualizowanie danych z bazy danych");
+        stage.show();
     }
 
-    public void wypoTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wypozyczenie.fxml"));
+    public void search(javafx.event.ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/searchMenu.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
     }
 

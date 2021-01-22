@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.MainController">
+<AnchorPane prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.MainController">
     <children>
         <HBox prefHeight="45.0" prefWidth="1200.0">
             <children>
@@ -23,12 +23,12 @@
                         <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
                     </HBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#egzTable" prefWidth="150.0" text="Egzemplarz">
+                <Button mnemonicParsing="false" onAction="#update" prefWidth="150.0" text="Aktualizacja">
                     <HBox.margin>
                         <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
                     </HBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#wypoTable" prefWidth="150.0" text="Wypożyczenie">
+                <Button mnemonicParsing="false" onAction="#search" prefWidth="150.0" text="Wyszukiwanie">
                     <HBox.margin>
                         <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
                     </HBox.margin>

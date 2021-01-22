@@ -2,7 +2,6 @@ package config;
 
 import connect.DbConnect;
 import database.Naprawa;
-import database.Wypozyczenie;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

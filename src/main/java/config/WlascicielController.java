@@ -1,8 +1,6 @@
 package config;
 
 import connect.DbConnect;
-import database.Egzemplarz;
-import database.Producent;
 import database.Wlasciciel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
