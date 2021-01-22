@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="442.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.NaprawaController">
+<AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.NaprawaController">
    <children>
-      <TableView fx:id="naprawaTable" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="1143.0">
+      <TableView fx:id="naprawaTable" layoutY="58.0" prefWidth="1200.0">
         <columns>
           <TableColumn fx:id="naprawaNazwaUslugi" minWidth="240.0" prefWidth="75.0" text="Nazwa usługi" />
           <TableColumn fx:id="naprawaDataNaprawy" minWidth="147.0" prefWidth="147.0" text="Data naprawy" />
@@ -15,5 +18,8 @@
             <TableColumn fx:id="naprawaSamochod" minWidth="240.0" prefWidth="305.0" text="Samochód" />
         </columns>
       </TableView>
+      <Text layoutX="103.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyszukiwarka:" />
+      <TextField fx:id="filterField" layoutX="203.0" layoutY="10.0" />
+      <Label fx:id="label" layoutX="277.0" layoutY="36.0" prefHeight="18.0" prefWidth="42.0" />
    </children>
 </AnchorPane>

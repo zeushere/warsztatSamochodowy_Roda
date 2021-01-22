@@ -4,10 +4,13 @@ import connect.DbConnect;
 import database.Usluga;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -19,11 +22,13 @@ import java.util.ResourceBundle;
 public class UslugaController implements Initializable {
 
     @FXML
-    private TableView<Usluga> uslugaTab;
+    private TableView<Usluga> uslugaTable;
     @FXML
     private TableColumn<Usluga, String> uslugaNazwa;
     @FXML
     private TableColumn<Usluga, String> uslugaRodzaj;
+    @FXML
+    private TextField filterField;
 
 
     private Connection connection;
@@ -58,7 +63,34 @@ public class UslugaController implements Initializable {
             uslugaNazwa.setCellValueFactory(new PropertyValueFactory<>("nazwa_uslugi"));
             uslugaRodzaj.setCellValueFactory(new PropertyValueFactory<>("rodzaj_uslugi"));
 
-            uslugaTab.setItems(uslugi);
+            FilteredList<Usluga> filteredData = new FilteredList<>(uslugi, b -> true);
+
+            filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredData.setPredicate(usluga -> {
+
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+
+                    String lowerCaseFilter = newValue.toLowerCase();
+
+                    if (usluga.getNazwa_uslugi().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+                        return true;
+                    }
+                     else if (usluga.getRodzaj_uslugi().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                }
+                        else {
+                        return false;
+                    }
+                });
+            });
+
+            SortedList<Usluga> sortedData = new SortedList<>(filteredData);
+
+            sortedData.comparatorProperty().bind(uslugaTable.comparatorProperty());
+
+            uslugaTable.setItems(sortedData);
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

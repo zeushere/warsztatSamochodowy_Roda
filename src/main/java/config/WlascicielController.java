@@ -4,10 +4,13 @@ import connect.DbConnect;
 import database.Wlasciciel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -17,8 +20,11 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class WlascicielController implements Initializable {
+
     @FXML
-    private TableView<Wlasciciel> wlascicielTab;
+    private TextField filterField;
+    @FXML
+    private TableView<Wlasciciel> wlascicielTable;
     @FXML
     private TableColumn<Wlasciciel, String> wlascicielImie;
     @FXML
@@ -44,6 +50,7 @@ public class WlascicielController implements Initializable {
 
     private void wlasciciel() {
         try {
+            System.out.println("elo");
             wlasciciele = FXCollections.observableArrayList();
             String select = "SELECT * FROM wlasciciel";
             connection = dbConnect.getConnection();
@@ -63,10 +70,47 @@ public class WlascicielController implements Initializable {
             wlascicielMarkaSamochodu.setCellValueFactory(new PropertyValueFactory<>("marka_samochodu_wlasciciela"));
             wlascicielModelSamochodu.setCellValueFactory(new PropertyValueFactory<>("model_samochodu_wlasciciela"));
 
-            wlascicielTab.setItems(wlasciciele);
 
-        } catch (SQLException throwables) {
+            FilteredList<Wlasciciel> filteredData = new FilteredList<>(wlasciciele, b -> true);
+
+            filterField.textProperty().addListener((observable,oldValue,newValue)->{
+                filteredData.setPredicate(wlasciciel -> {
+
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+
+                    // Compare first name and last name of every person with filter text.
+                    String lowerCaseFilter = newValue.toLowerCase();
+
+                    if (wlasciciel.getImie_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+                        return true; // Filter matches first name.
+                    } else if (wlasciciel.getNazwisko_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                        return true; // Filter matches last name.
+                    }
+                    else if(wlasciciel.getMarka_samochodu_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                        return true;
+                    }
+                    else if (wlasciciel.getModel_samochodu_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                        return true;
+                    }
+                    else
+                        return false;
+                });
+            });
+
+
+            SortedList<Wlasciciel> sortedData = new SortedList<>(filteredData);
+
+            sortedData.comparatorProperty().bind(wlascicielTable.comparatorProperty());
+
+
+            wlascicielTable.setItems(sortedData);
+
+        }
+        catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
 }
+

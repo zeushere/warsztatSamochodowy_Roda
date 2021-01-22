@@ -6,18 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/SearchController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/UslugaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/UslugaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/WlascicielController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/WlascicielController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/search/searchNaprawa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/search/searchUsluga.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/search/searchWlasciciel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/naprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/naprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/searchMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/search/searchNaprawa.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/search/searchUsluga.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/search/searchWlasciciel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/usluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/usluga.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/wlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/wlasciciel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FXML/naprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/naprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/searchMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/search/searchNaprawa.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/search/searchUsluga.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/search/searchWlasciciel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/usluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/usluga.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FXML/wlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/wlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/SearchController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/UslugaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/UslugaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/WlascicielController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/WlascicielController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/search/searchNaprawa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/search/searchUsluga.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/search/searchWlasciciel.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +123,7 @@
       <workItem from="1611219789153" duration="20000" />
       <workItem from="1611220359497" duration="3000" />
       <workItem from="1611220607381" duration="26132000" />
-      <workItem from="1611331550474" duration="12910000" />
+      <workItem from="1611331550474" duration="16183000" />
     </task>
     <servers />
   </component>
