@@ -4,29 +4,48 @@ import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static java.lang.System.exit;
+
 public class MainController {
+
+    @FXML
+    private AnchorPane anchorPane;
+
     @FXML
     private Pane wyswietl;
 
+    @FXML
+    private Pane searchPane;
+
+    public int wywolanieTabeli = 0;
+
+
     public void uslugaTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
+        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
+        wywolanieTabeli = 1;
     }
 
-    public void wlascicelTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
+    public void wlascicielTable(javafx.event.ActionEvent actionEvent) throws IOException {
+        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
+       wywolanieTabeli = 2;
     }
 
     public void naprawaTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
+        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
+        wywolanieTabeli = 3;
     }
 
     public void update(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -40,8 +59,39 @@ public class MainController {
     }
 
     public void search(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/searchMenu.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+
+        if(wywolanieTabeli == 2)
+        {
+            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
+            wyswietl.getChildren().setAll(anchorPane);
+            searchPane.setVisible(true);
+
+        }
+
+        else if(wywolanieTabeli == 3)
+        {
+            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
+            wyswietl.getChildren().setAll(anchorPane);
+            searchPane.setVisible(true);
+
+        }
+
+        else if(wywolanieTabeli == 1)
+        {
+            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
+            wyswietl.getChildren().setAll(anchorPane);
+
+        }
+
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Błąd!");
+            alert.setHeaderText("Nie wybrałeś żadnej tabeli!");
+            alert.showAndWait();
+
+        }
+
     }
 
     public void add(ActionEvent actionEvent) throws IOException{
@@ -62,5 +112,8 @@ public class MainController {
         stage.setScene(scene);
         stage.setTitle("Usuwanie danych z bazy danych");
         stage.show();
+    }
+
+    public void searchContent(ActionEvent actionEvent) {
     }
 }
