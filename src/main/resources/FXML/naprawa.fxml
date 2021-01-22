@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.NaprawaController">
    <children>
@@ -20,6 +17,5 @@
       </TableView>
       <Text layoutX="103.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyszukiwarka:" />
       <TextField fx:id="filterField" layoutX="203.0" layoutY="10.0" />
-      <Label fx:id="label" layoutX="277.0" layoutY="36.0" prefHeight="18.0" prefWidth="42.0" />
    </children>
 </AnchorPane>
