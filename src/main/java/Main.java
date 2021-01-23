@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/FXML/main.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/FXML/login.fxml"));
         AnchorPane anchorPane = fxmlLoader.load();
         Scene scene = new Scene(anchorPane);
         stage.setScene(scene);

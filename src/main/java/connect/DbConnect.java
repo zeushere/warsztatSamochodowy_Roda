@@ -10,9 +10,10 @@ public class DbConnect {
         final String connectionString="jdbc:mysql://localhost:3306/warsztat_samochodowy";
         try {
             connection = DriverManager.getConnection(connectionString,"root", "");
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            return connection;
+
+        } catch (SQLException ex) {
         }
-        return connection;
+        return null;
     }
 }

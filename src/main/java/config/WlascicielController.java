@@ -50,7 +50,6 @@ public class WlascicielController implements Initializable {
 
     private void wlasciciel() {
         try {
-            System.out.println("elo");
             wlasciciele = FXCollections.observableArrayList();
             String select = "SELECT * FROM wlasciciel";
             connection = dbConnect.getConnection();
