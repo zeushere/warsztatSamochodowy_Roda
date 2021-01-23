@@ -27,5 +27,10 @@ public class Main extends Application {
         stage.setTitle("Warsztat Samochodowy");
         stage.show();
 
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            public void handle(WindowEvent we) {
+               System.exit(0);
+            }
+        });
     }
 }
