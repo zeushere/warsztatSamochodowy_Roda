@@ -38,6 +38,7 @@ public class RegisterController implements Initializable {
     @FXML
     private Button btnSignup;
 
+
     private Connection connection;
     private DbConnect dbConnect;
 
@@ -68,6 +69,24 @@ public class RegisterController implements Initializable {
 
         }
     }
+
+    public void back(ActionEvent actionEvent)
+    {
+        try {
+
+            Node node = (Node) actionEvent.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+            Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/login.fxml")));
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            System.err.println(ex.getMessage());
+        }
+
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
