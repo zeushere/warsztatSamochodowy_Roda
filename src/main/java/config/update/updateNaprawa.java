@@ -38,6 +38,8 @@ public class updateNaprawa implements Initializable {
     @FXML
     private CheckBox updateCheckboxDataNaprawy;
 
+    int czyWykonane = 0;
+
     private Connection connection;
     ArrayList listNaprawa = new ArrayList();
 
@@ -71,16 +73,15 @@ public class updateNaprawa implements Initializable {
     }
 
 
-    public void selectNaprawaAction(ActionEvent actionEvent) throws SQLException{
+    public void selectNaprawaAction(ActionEvent actionEvent) throws SQLException {
 
-        if(selectNaprawa.getSelectionModel().isEmpty() == false)
-        {
+        if (selectNaprawa.getSelectionModel().isEmpty() == false) {
             naprawaUpdateButton.setDisable(false);
         }
     }
 
 
-    public void checkBoxKosztNaprawy(ActionEvent actionEvent) throws SQLException{
+    public void checkBoxKosztNaprawy(ActionEvent actionEvent) throws SQLException {
 
         if (naprawaUpdateKosztNaprawy.isDisable() == true) {
             naprawaUpdateKosztNaprawy.setDisable(false);
@@ -89,7 +90,7 @@ public class updateNaprawa implements Initializable {
         }
     }
 
-    public void checkBoxDataNaprawy(ActionEvent actionEvent) throws SQLException{
+    public void checkBoxDataNaprawy(ActionEvent actionEvent) throws SQLException {
 
         if (naprawaUpdateDataNaprawy.isDisable() == true) {
             naprawaUpdateDataNaprawy.setDisable(false);
@@ -128,6 +129,7 @@ public class updateNaprawa implements Initializable {
 
                     if (rowsCount > 0) {
                         naprawaUpdateKosztNaprawy.clear();
+                        czyWykonane = 1;
                     }
 
                 }
@@ -155,6 +157,7 @@ public class updateNaprawa implements Initializable {
 
                     if (rowsCount > 0) {
                         naprawaUpdateDataNaprawy.getEditor().clear();
+                        czyWykonane = 1;
                     }
 
                 } catch (Exception ex) {
@@ -165,29 +168,27 @@ public class updateNaprawa implements Initializable {
                 }
             }
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Informacja");
-            alert.setHeaderText("Pomyślnie wykonano polecenie!");
+            if(czyWykonane == 1) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                alert.showAndWait();
+
+
+                Stage thisStage = (Stage) updateCheckboxKosztNaprawy.getScene().getWindow();
+                Scene thisScene = updateCheckboxKosztNaprawy.getScene();
+
+
+                SceneController sceneController = new SceneController(thisStage, thisScene);
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Błąd!");
+            alert.setHeaderText("Nie wybrano nic do zmiany!");
             alert.showAndWait();
 
-
-            Stage thisStage = (Stage) updateCheckboxKosztNaprawy.getScene().getWindow();
-            Scene thisScene = updateCheckboxKosztNaprawy.getScene();
-
-            SceneController sceneController = new SceneController(thisStage, thisScene);
-
         }
 
-
-
-        else {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Błąd!");
-        alert.setHeaderText("Nie wybrano nic do zmiany!");
-        alert.showAndWait();
-
-        }
-
-        }
-        }
+    }
+}
 

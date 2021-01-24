@@ -4,26 +4,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.update.updateWlasciciel">
+<AnchorPane prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.update.updateWlasciciel">
    <children>
       <Pane prefHeight="400.0" prefWidth="400.0">
          <children>
-            <TextField fx:id="wlascicielUpdateImie" layoutX="126.0" layoutY="101.0" />
-            <TextField fx:id="wlascicielUpdateNazwisko" layoutX="126.0" layoutY="150.0" />
-            <Text layoutX="124.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie właściciela" />
-            <Text layoutX="132.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko właściciela" wrappingWidth="136.802734375" />
+            <TextField fx:id="wlascicielUpdateImie" layoutX="126.0" layoutY="131.0" />
+            <TextField fx:id="wlascicielUpdateNazwisko" layoutX="126.0" layoutY="188.0" />
+            <Text layoutX="132.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie właściciela" />
+            <Text layoutX="132.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko właściciela" wrappingWidth="136.802734375" />
 
-            <TextField fx:id="wlascicielUpdateMarkaSamochodu" layoutX="126.0" layoutY="209.0" />
-            <Text layoutX="126.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marka samochodu właściciela" wrappingWidth="204.2027587890625" />
-            <Text layoutX="127.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Model samochodu właściciela" wrappingWidth="160.802734375" />
-            <TextField fx:id="wlascicielUpdateModelSamochodu" layoutX="124.0" layoutY="273.0" />
-            <Button fx:id="updateWlascicielButton" layoutX="133.0" layoutY="324.0" mnemonicParsing="false" onAction="#updateWlasciciel" text="Zaktualizuj właściciela" />
-            <CheckBox fx:id="updateCheckboxImieWlasciciela" layoutX="288.0" layoutY="105.0" mnemonicParsing="false" onAction="#checkBoxImieWlasciciela" />
-            <CheckBox fx:id="updateCheckboxNazwiskoWlasciciela" layoutX="288.0" layoutY="154.0" mnemonicParsing="false" onAction="#checkBoxNazwiskoWlasciciela" />
-            <CheckBox fx:id="updateCheckboxMarkaSamochoduWlasciciela" layoutX="288.0" layoutY="213.0" mnemonicParsing="false" onAction="#checkBoxMarkaSamochoduWlasciciela" />
-            <CheckBox fx:id="updateCheckboxModelSamochoduWlasciciela" layoutX="288.0" layoutY="277.0" mnemonicParsing="false" onAction="#checkBoxModelSamochoduWlasciciela" />
-            <ComboBox fx:id="selectWlasciciel" layoutX="125.0" layoutY="37.0" onAction="#selectWlascicielAction" prefWidth="150.0" />
-            <Text layoutX="122.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz właściciela do aktualizacji" wrappingWidth="211.802734375" />
+            <TextField fx:id="wlascicielUpdateMarkaSamochodu" layoutX="126.0" layoutY="247.0" />
+            <Text layoutX="124.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marka samochodu właściciela" wrappingWidth="204.2027587890625" />
+            <Text layoutX="126.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Model samochodu właściciela" wrappingWidth="215.802734375" />
+            <TextField fx:id="wlascicielUpdateModelSamochodu" layoutX="126.0" layoutY="302.0" />
+            <Button fx:id="updateWlascicielButton" layoutX="124.0" layoutY="343.0" mnemonicParsing="false" onAction="#updateWlasciciel" text="Zaktualizuj właściciela" />
+            <CheckBox fx:id="updateCheckboxImieWlasciciela" layoutX="288.0" layoutY="135.0" mnemonicParsing="false" onAction="#checkBoxImieWlasciciela" />
+            <CheckBox fx:id="updateCheckboxNazwiskoWlasciciela" layoutX="288.0" layoutY="192.0" mnemonicParsing="false" onAction="#checkBoxNazwiskoWlasciciela" />
+            <CheckBox fx:id="updateCheckboxMarkaSamochoduWlasciciela" layoutX="288.0" layoutY="251.0" mnemonicParsing="false" onAction="#checkBoxMarkaSamochoduWlasciciela" />
+            <CheckBox fx:id="updateCheckboxModelSamochoduWlasciciela" layoutX="288.0" layoutY="306.0" mnemonicParsing="false" onAction="#checkBoxModelSamochoduWlasciciela" />
+            <ComboBox fx:id="selectWlasciciel" layoutX="125.0" layoutY="66.0" onAction="#selectWlascicielAction" prefWidth="150.0" />
+            <Label layoutX="123.0" layoutY="38.0" text="Wybierz właściciela do aktualizacji" />
          </children>
       </Pane>
    </children>

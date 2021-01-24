@@ -63,6 +63,7 @@ public class updateWlasciciel implements Initializable {
 
     private ArrayList listWlasciciel = new ArrayList();
 
+    int czyWykonane = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -181,6 +182,7 @@ public class updateWlasciciel implements Initializable {
                             if(rowsCount>0)
                             {
                                 wlascicielUpdateImie.clear();
+                                czyWykonane = 1;
                             }
                         }
                 }
@@ -215,6 +217,7 @@ public class updateWlasciciel implements Initializable {
                     if(rowsCount>0)
                     {
                         wlascicielUpdateNazwisko.clear();
+                        czyWykonane = 1;
                     }
                     }
                 }
@@ -247,6 +250,7 @@ public class updateWlasciciel implements Initializable {
                         if(rowsCount>0)
                         {
                             wlascicielUpdateMarkaSamochodu.clear();
+                            czyWykonane = 1;
                         }
                     }
                 }
@@ -279,23 +283,26 @@ public class updateWlasciciel implements Initializable {
                         if(rowsCount>0)
                         {
                             wlascicielUpdateModelSamochodu.clear();
-
-
+                            czyWykonane = 1;
                         }
                     }
                 }
 
+                if(czyWykonane == 1)
+                {
 
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Informacja");
-                alert.setHeaderText("Pomyślnie wykonano polecenie!");
-                alert.showAndWait();
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Informacja");
+                    alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                    alert.showAndWait();
 
 
-                Stage thisStage = (Stage) wlascicielUpdateMarkaSamochodu.getScene().getWindow();
-                Scene thisScene = wlascicielUpdateMarkaSamochodu.getScene();
+                    Stage thisStage = (Stage) wlascicielUpdateMarkaSamochodu.getScene().getWindow();
+                    Scene thisScene = wlascicielUpdateMarkaSamochodu.getScene();
 
-                SceneController sceneController = new SceneController(thisStage,thisScene);
+                    SceneController sceneController = new SceneController(thisStage,thisScene);
+                }
+
             }
 
 

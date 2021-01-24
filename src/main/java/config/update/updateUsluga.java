@@ -42,6 +42,7 @@ public class updateUsluga implements Initializable {
 
     private ArrayList listUsluga = new ArrayList();
 
+    int czyWykonane = 0;
 
 
     @Override
@@ -138,6 +139,8 @@ public class updateUsluga implements Initializable {
                     if(rowsCount>0)
                     {
                         uslugaUpdateNazwa.clear();
+
+                        czyWykonane = 1;
                     }
                 }
             }
@@ -172,20 +175,27 @@ public class updateUsluga implements Initializable {
                     if(rowsCount>0)
                     {
                         uslugaUpdateRodzaj.clear();
+
+                        czyWykonane = 1;
+
                     }
                 }
             }
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Informacja");
-            alert.setHeaderText("Pomyślnie wykonano polecenie!");
-            alert.showAndWait();
+            if(czyWykonane == 1)
+            {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                alert.showAndWait();
 
 
-            Stage thisStage = (Stage) uslugaUpdateRodzaj.getScene().getWindow();
-            Scene thisScene = uslugaUpdateRodzaj.getScene();
+                Stage thisStage = (Stage) uslugaUpdateRodzaj.getScene().getWindow();
+                Scene thisScene = uslugaUpdateRodzaj.getScene();
 
-            SceneController sceneController = new SceneController(thisStage, thisScene);
+                SceneController sceneController = new SceneController(thisStage, thisScene);
+            }
+
 
         }
         else {

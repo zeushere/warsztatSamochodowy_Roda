@@ -180,7 +180,7 @@ public class LoginController implements Initializable {
         String login = txtUsername.getText();
         String password = txtPassword.getText();
         if(login.isEmpty() || password.isEmpty()) {
-            setLblError(Color.TOMATO, "Empty credentials");
+            setLblError(Color.TOMATO, "Puste znaki!");
             status = "Error";
         } else {
 
@@ -192,7 +192,7 @@ public class LoginController implements Initializable {
                 ResultSet resultSet;
                 resultSet = preparedStatement.executeQuery();
                 if (!resultSet.next()) {
-                    setLblError(Color.TOMATO, "Enter Correct Login/Password");
+                    setLblError(Color.TOMATO, "Wprowadź prawidłową nazwę użytkownika/hasło!");
                     status = "Error";
                 } else {
                     setLblError(Color.GREEN, "Login Successful..Redirecting..");

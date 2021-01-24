@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.add.addWlasciciel">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.add.addWlasciciel">
    <children>
-      <Pane prefHeight="400.0" prefWidth="400.0">
+      <Pane prefHeight="400.0" prefWidth="463.0">
          <children>
-            <TextField fx:id="wlascicielAddImie" layoutX="126.0" layoutY="50.0" />
-            <TextField fx:id="wlascicielAddNazwisko" layoutX="126.0" layoutY="101.0" />
-            <Text layoutX="126.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie właściciela" />
-            <Text layoutX="132.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko właściciela" wrappingWidth="136.802734375" />
+            <TextField fx:id="wlascicielAddImie" layoutX="125.0" layoutY="59.0" />
+            <TextField fx:id="wlascicielAddNazwisko" layoutX="126.0" layoutY="125.0" />
+            <Text layoutX="132.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie właściciela" />
+            <Text layoutX="132.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko właściciela" wrappingWidth="136.802734375" />
 
-            <TextField fx:id="wlascicielAddMarkaSamochodu" layoutX="126.0" layoutY="151.0" />
-            <Text layoutX="130.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marka samochodu właściciela" wrappingWidth="204.2027587890625" />
-            <Text layoutX="127.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Model samochodu właściciela" wrappingWidth="160.802734375" />
-            <TextField fx:id="wlascicielAddModelSamochodu" layoutX="126.0" layoutY="200.0" />
-            <Button layoutX="130.0" layoutY="237.0" mnemonicParsing="false" onAction="#addWlasciciel" text="Dodaj właściciela" />
+            <TextField fx:id="wlascicielAddMarkaSamochodu" layoutX="126.0" layoutY="200.0" />
+            <Text layoutX="131.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marka samochodu właściciela" wrappingWidth="204.2027587890625" />
+            <Text layoutX="132.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Model samochodu właściciela" wrappingWidth="226.4027099609375" />
+            <TextField fx:id="wlascicielAddModelSamochodu" layoutX="126.0" layoutY="275.0" />
+            <Button layoutX="127.0" layoutY="328.0" mnemonicParsing="false" onAction="#addWlasciciel" text="Dodaj właściciela" />
          </children>
       </Pane>
    </children>

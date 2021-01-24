@@ -165,6 +165,7 @@ public class PasswordController implements Initializable {
 
     }
 
+    @FXML
     private String resetPassword() {
         connection = dbConnect.getConnection();
 
