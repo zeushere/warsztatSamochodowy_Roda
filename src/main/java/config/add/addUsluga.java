@@ -22,7 +22,7 @@ public class addUsluga {
     public void addUsluga(ActionEvent actionEvent) throws SQLException {
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
-        if (uslugaAddNazwa.getLength()!=1) {
+        if (!(uslugaAddNazwa.getText().equals("")) && !(uslugaAddRodzaj.getText().equals("")) ) {
             String query = "INSERT INTO usluga(nazwa_uslugi, rodzaj_uslugi) VALUES('"
                     +uslugaAddNazwa.getText()+"','"
                     +uslugaAddRodzaj.getText()+"')";
@@ -34,7 +34,7 @@ public class addUsluga {
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
-            alert.setHeaderText("Nazwa usługi musi być dłuższa");
+            alert.setHeaderText("Uzupełnij wszystkie pola!");
             alert.showAndWait();
         }
     }

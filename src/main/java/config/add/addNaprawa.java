@@ -71,36 +71,48 @@ public class addNaprawa implements Initializable {
 
 
     public void naprawaAdd(ActionEvent actionEvent) throws SQLException{
+
+
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
-        int idWlasciciela = (int) listWlasciciel.get(naprawaSelectWlasciciel.getSelectionModel().getSelectedIndex());
-        int idUslugi = (int) listUsluga.get(naprawaSelectUsluga.getSelectionModel().getSelectedIndex());
-        LocalDate data = LocalDate.now();
-        LocalDate dataNaprawy = naprawaData.getValue();
 
-        if ((data.isBefore(dataNaprawy)) || data.isEqual(dataNaprawy)){
-            String query = "INSERT INTO naprawa(koszt_naprawy,data_naprawy,id_wlasciciela,id_uslugi) VALUES ('"
-                    +naprawaKoszt.getText()+"','"
-                    +dataNaprawy+"','"
-                    +idWlasciciela+"','"
-                    +idUslugi +"')";
-            int execute = connection.createStatement().executeUpdate(query);
-            if (execute > 0) {
-                naprawaSelectWlasciciel.getItems().clear();
-                listWlasciciel.clear();
-                naprawaSelectWlasciciel();
-                naprawaSelectUsluga.getItems().clear();
-                listUsluga.clear();
-                naprawaSelectUsluga();
-                naprawaData.setValue(null);
-                naprawaKoszt.clear();
+        try {
+            int idWlasciciela = (int) listWlasciciel.get(naprawaSelectWlasciciel.getSelectionModel().getSelectedIndex());
+            int idUslugi = (int) listUsluga.get(naprawaSelectUsluga.getSelectionModel().getSelectedIndex());
+            LocalDate data = LocalDate.now();
+            LocalDate dataNaprawy = naprawaData.getValue();
 
+            if ((data.isBefore(dataNaprawy)) || data.isEqual(dataNaprawy)) {
+                String query = "INSERT INTO naprawa(koszt_naprawy,data_naprawy,id_wlasciciela,id_uslugi) VALUES ('"
+                        + naprawaKoszt.getText() + "','"
+                        + dataNaprawy + "','"
+                        + idWlasciciela + "','"
+                        + idUslugi + "')";
+                int execute = connection.createStatement().executeUpdate(query);
+                if (execute > 0) {
+                    naprawaSelectWlasciciel.getItems().clear();
+                    listWlasciciel.clear();
+                    naprawaSelectWlasciciel();
+                    naprawaSelectUsluga.getItems().clear();
+                    listUsluga.clear();
+                    naprawaSelectUsluga();
+                    naprawaData.setValue(null);
+                    naprawaKoszt.clear();
+
+                }
+            } else {
+
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Błąd!");
+                alert.setHeaderText("Data nie może być z przeszłości!");
+                alert.showAndWait();
             }
-        } else {
+        }
 
+        catch (Exception ex){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
-            alert.setHeaderText("Ustaw poprawnie datę oddania (nie może być wcześniejsza niż aktualna)");
+            alert.setHeaderText("Uzupełnij wszystkie pola!");
             alert.showAndWait();
         }
     }

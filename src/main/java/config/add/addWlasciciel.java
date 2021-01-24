@@ -32,7 +32,7 @@ public class addWlasciciel {
     public void addWlasciciel(ActionEvent actionEvent) throws SQLException {
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
-        if (wlascicielAddImie.getLength()!=1) {
+        if (!(wlascicielAddImie.getText().equals("")) && !(wlascicielAddNazwisko.getText().equals("")) && !(wlascicielAddMarkaSamochodu.getText().equals("")) && !(wlascicielAddModelSamochodu.getText().equals(""))) {
             String query = "INSERT INTO wlasciciel(imie_wlasciciela, nazwisko_wlasciciela, marka_samochodu_wlasciciela, model_samochodu_wlasciciela) VALUES('"
                     +wlascicielAddImie.getText()+"','"
                     +wlascicielAddNazwisko.getText()+"','"
@@ -48,7 +48,7 @@ public class addWlasciciel {
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
-            alert.setHeaderText("Nazwa usługi musi być dłuższa");
+            alert.setHeaderText("Uzupełnij wszystkie pola!");
             alert.showAndWait();
         }
     }

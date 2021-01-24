@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addNaprawa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addNaprawa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addUsluga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addUsluga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/add/addWlasciciel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/add/addWlasciciel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addNaprawa.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,19 +71,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -107,6 +98,7 @@
       <workItem from="1611393924703" duration="11875000" />
       <workItem from="1611405835623" duration="92000" />
       <workItem from="1611405944079" duration="12984000" />
+      <workItem from="1611491364508" duration="1743000" />
     </task>
     <servers />
   </component>
