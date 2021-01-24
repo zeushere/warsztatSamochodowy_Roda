@@ -128,6 +128,12 @@ public class updateNaprawa implements Initializable {
         stringBuilder.append(idNaprawy);
 
         int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+        if(rowsCount>0)
+        {
+            naprawaUpdateKosztNaprawy.clear();
+        }
+
         }
         }
 
@@ -135,9 +141,8 @@ public class updateNaprawa implements Initializable {
 
         try{
 
-            LocalDate data = LocalDate.now();
             LocalDate dataNaprawy = naprawaUpdateDataNaprawy.getValue();
-            if ((data.isBefore(dataNaprawy)) || (data.isEqual(dataNaprawy))) {
+
                 DbConnect dbConnect = new DbConnect();
                 connection = dbConnect.getConnection();
 
@@ -151,23 +156,19 @@ public class updateNaprawa implements Initializable {
                 stringBuilder.append(idNaprawy);
 
                 int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
-            }
-            else
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Błąd!");
-                alert.setHeaderText("Data naprawy nie możemy być wcześniejsza niż aktualna!");
-                alert.showAndWait();
-            }
+
+                if (rowsCount>0)
+                {
+                    naprawaUpdateDataNaprawy.getEditor().clear();
+                }
+
         }
 
         catch(Exception ex)
         {
-
-
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
-            alert.setHeaderText("Nie wybrano poprawnie datę naprawy!");
+            alert.setHeaderText("Nie wybrano poprawnie daty naprawy!");
             alert.showAndWait();
         }
         }

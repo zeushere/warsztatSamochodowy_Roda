@@ -4,6 +4,7 @@ import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 
 import java.net.URL;
@@ -47,16 +48,26 @@ public class delNaprawa implements Initializable {
         }
     }
 
-    public void naprawaDelete(ActionEvent actionEvent) throws SQLException{
-        int id = (int) listNaprawa.get(naprawaSelect.getSelectionModel().getSelectedIndex());
-        DbConnect dbConnect = new DbConnect();
-        connection = dbConnect.getConnection();
-        String query = "DELETE FROM naprawa WHERE id_naprawy="+id;
-        int ex = connection.createStatement().executeUpdate(query);
-        if(ex>0){
-            listNaprawa.clear();
-            naprawaSelect.getItems().clear();
-            naprawaSelect();
+    public void naprawaDelete(ActionEvent actionEvent) throws SQLException {
+
+        try {
+            int id = (int) listNaprawa.get(naprawaSelect.getSelectionModel().getSelectedIndex());
+            DbConnect dbConnect = new DbConnect();
+            connection = dbConnect.getConnection();
+            String query = "DELETE FROM naprawa WHERE id_naprawy=" + id;
+            int ex = connection.createStatement().executeUpdate(query);
+            if (ex > 0) {
+                listNaprawa.clear();
+                naprawaSelect.getItems().clear();
+                naprawaSelect();
+            }
+        }
+        catch (Exception ex)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Błąd!");
+            alert.setHeaderText("Nie wybrano naprawy do usunięcia!");
+            alert.showAndWait();
         }
     }
 }

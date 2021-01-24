@@ -161,6 +161,11 @@ public class updateWlasciciel implements Initializable {
                             stringBuilder.append(idWlasciciela);
 
                             int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                            if(rowsCount>0)
+                            {
+                                wlascicielUpdateImie.clear();
+                            }
                         }
                 }
 
@@ -190,6 +195,11 @@ public class updateWlasciciel implements Initializable {
                     stringBuilder.append(idWlasciciela);
 
                     int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                    if(rowsCount>0)
+                    {
+                        wlascicielUpdateNazwisko.clear();
+                    }
                     }
                 }
 
@@ -217,6 +227,11 @@ public class updateWlasciciel implements Initializable {
                         stringBuilder.append(idWlasciciela);
 
                         int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                        if(rowsCount>0)
+                        {
+                            wlascicielUpdateMarkaSamochodu.clear();
+                        }
                     }
                 }
 
@@ -244,6 +259,11 @@ public class updateWlasciciel implements Initializable {
                         stringBuilder.append(idWlasciciela);
 
                         int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                        if(rowsCount>0)
+                        {
+                            wlascicielUpdateModelSamochodu.clear();
+                        }
                     }
                 }
             }

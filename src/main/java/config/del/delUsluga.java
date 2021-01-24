@@ -54,12 +54,21 @@ public class delUsluga implements Initializable {
                 uslugaSelect.getItems().clear();
                 uslugaSelect();
             }
-        }catch (SQLException throwables) {
+        }catch (SQLException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Musisz najpierw usunąć naprawę powiązaną z daną usługą!");
             alert.showAndWait();
         }
+
+        catch (RuntimeException ex)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Błąd!");
+            alert.setHeaderText("Nie wybrano usługi do usunięcia!");
+            alert.showAndWait();
+        }
+
     }
 
 

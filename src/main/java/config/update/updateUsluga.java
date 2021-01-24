@@ -130,6 +130,11 @@ public class updateUsluga implements Initializable {
                     stringBuilder.append(idUslugi);
 
                     int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                    if(rowsCount>0)
+                    {
+                        uslugaUpdateNazwa.clear();
+                    }
                 }
             }
 
@@ -159,6 +164,11 @@ public class updateUsluga implements Initializable {
                     stringBuilder.append(idUslugi);
 
                     int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                    if(rowsCount>0)
+                    {
+                        uslugaUpdateRodzaj.clear();
+                    }
                 }
             }
         }

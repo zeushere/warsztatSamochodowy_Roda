@@ -52,10 +52,18 @@ public class delWlasciciel implements Initializable {
                 wlascicielSelect.getItems().clear();
                 wlascicielSelect();
             }
-        }catch (SQLException throwables) {
+        }catch (SQLException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
-            alert.setHeaderText("Musisz najpierw usunąć naprawę powiązaną z danym wlascicielem!");
+            alert.setHeaderText("Musisz najpierw usunąć naprawę powiązaną z danym właścicielem!");
+            alert.showAndWait();
+        }
+
+        catch (RuntimeException ex)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Błąd!");
+            alert.setHeaderText("Nie wybrano właściciela do usunięcia!");
             alert.showAndWait();
         }
     }
