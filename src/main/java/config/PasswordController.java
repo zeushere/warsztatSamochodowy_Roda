@@ -10,16 +10,20 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.Socket;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,7 +35,15 @@ public class PasswordController implements Initializable {
     private Label lblErrors;
 
     @FXML
+    private AnchorPane anchorPane;
+
+    @FXML
     private TextField txtEmail;
+
+    private static final String SERVER_ADDRESS = "127.0.0.1";
+    private static final int TCP_SERVER_PORT = 3306;
+    private static boolean connected = false;
+    static Socket s;
 
 
     private Connection connection;
@@ -58,6 +70,67 @@ public class PasswordController implements Initializable {
 
     }
 
+    TimerTask task = new TimerTask() {
+
+
+        @Override
+        public void run() {
+            if (connected == false) {
+
+                if(hostAvailabilityCheck() == true) {
+                    try {
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    finally {
+                        anchorPane.setDisable(false);
+                    }
+                }
+                else if(hostAvailabilityCheck() == false)
+                {
+
+                    try
+                    {
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    finally {
+                        anchorPane.setDisable(true);
+                    }
+
+                }
+            }
+        }
+    };
+
+    public boolean hostAvailabilityCheck()
+    {
+
+        boolean available = true;
+        try {
+            if (connected == false)
+            {
+                (s = new Socket(SERVER_ADDRESS, TCP_SERVER_PORT)).close();
+            }
+
+
+        }
+        catch (Exception e)
+        {
+            available = false;
+            s = null;
+        }
+        return available;
+    }
+
 
     public void resetPasswordAction(ActionEvent actionEvent) {
 
@@ -81,6 +154,10 @@ public class PasswordController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         dbConnect = new DbConnect();
+
+        Timer timer = new Timer();
+
+        timer.schedule(task,01,1000);
 
     }
 

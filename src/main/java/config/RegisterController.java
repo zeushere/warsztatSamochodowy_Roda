@@ -1,9 +1,12 @@
 package config;
 
 import java.io.IOException;
+import java.net.Socket;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;;
 
@@ -25,6 +29,9 @@ public class RegisterController implements Initializable {
 
     @FXML
     private Label lblErrors;
+
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     private TextField txtUsername;
@@ -41,6 +48,11 @@ public class RegisterController implements Initializable {
 
     private Connection connection;
     private DbConnect dbConnect;
+
+    private static final String SERVER_ADDRESS = "127.0.0.1";
+    private static final int TCP_SERVER_PORT = 3306;
+    private static boolean connected = false;
+    static Socket s;
 
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,6}$", Pattern.CASE_INSENSITIVE);
@@ -70,6 +82,67 @@ public class RegisterController implements Initializable {
         }
     }
 
+    TimerTask task = new TimerTask() {
+
+
+        @Override
+        public void run() {
+            if (connected == false) {
+
+                if(hostAvailabilityCheck() == true) {
+                    try {
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    finally {
+                        anchorPane.setDisable(false);
+                    }
+                }
+                else if(hostAvailabilityCheck() == false)
+                {
+
+                    try
+                    {
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    finally {
+                        anchorPane.setDisable(true);
+                    }
+
+                }
+            }
+        }
+    };
+
+    public boolean hostAvailabilityCheck()
+    {
+
+        boolean available = true;
+        try {
+            if (connected == false)
+            {
+                (s = new Socket(SERVER_ADDRESS, TCP_SERVER_PORT)).close();
+            }
+
+
+        }
+        catch (Exception e)
+        {
+            available = false;
+            s = null;
+        }
+        return available;
+    }
+
     public void back(ActionEvent actionEvent)
     {
         try {
@@ -91,6 +164,10 @@ public class RegisterController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         dbConnect = new DbConnect();
+
+        Timer timer = new Timer();
+
+        timer.schedule(task,01,1000);
 
     }
 
