@@ -1,11 +1,15 @@
 package config.update;
 
+import config.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -94,7 +98,7 @@ public class updateUsluga implements Initializable {
         }
 
     }
-    public void updateUsluga(ActionEvent actionEvent) throws SQLException{
+    public void updateUsluga(ActionEvent actionEvent) throws SQLException, IOException {
 
 
         int idUslugi = (int) listUsluga.get(selectUsluga.getSelectionModel().getSelectedIndex());
@@ -171,6 +175,18 @@ public class updateUsluga implements Initializable {
                     }
                 }
             }
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Informacja");
+            alert.setHeaderText("Pomyślnie wykonano polecenie!");
+            alert.showAndWait();
+
+
+            Stage thisStage = (Stage) uslugaUpdateRodzaj.getScene().getWindow();
+            Scene thisScene = uslugaUpdateRodzaj.getScene();
+
+            SceneController sceneController = new SceneController(thisStage, thisScene);
+
         }
         else {
             Alert alert = new Alert(Alert.AlertType.ERROR);

@@ -1,12 +1,16 @@
 package config.del;
 
+import config.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -40,7 +44,7 @@ public class delWlasciciel implements Initializable {
         }
     }
 
-    public void wlascicielDel(ActionEvent actionEvent) {
+    public void wlascicielDel(ActionEvent actionEvent) throws IOException {
         try {
             int id = (int) listWlasciciel.get(wlascicielSelect.getSelectionModel().getSelectedIndex());
             DbConnect dbConnect = new DbConnect();
@@ -48,9 +52,22 @@ public class delWlasciciel implements Initializable {
             String query = "DELETE FROM wlasciciel WHERE id_wlasciciela=" + id;
             int ex = connection.createStatement().executeUpdate(query);
             if (ex > 0) {
+
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                alert.showAndWait();
+
                 listWlasciciel.clear();
                 wlascicielSelect.getItems().clear();
                 wlascicielSelect();
+
+                Stage thisStage = (Stage) wlascicielSelect.getScene().getWindow();
+                Scene thisScene = wlascicielSelect.getScene();
+
+                SceneController sceneController = new SceneController(thisStage, thisScene);
+
             }
         }catch (SQLException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);

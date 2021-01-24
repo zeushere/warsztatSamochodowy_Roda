@@ -16,8 +16,10 @@ import java.io.IOException;
 
 import static java.lang.System.exit;
 
-public class MainController {
+public class MainController{
 
+    @FXML
+    private Stage stage;
     @FXML
     private AnchorPane anchorPane;
 
@@ -31,11 +33,11 @@ public class MainController {
     private TextField searchTextField;
 
 
-
-
     public void uslugaTable(javafx.event.ActionEvent actionEvent) throws IOException {
+
         anchorPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
+
 
     }
 
@@ -54,6 +56,8 @@ public class MainController {
     public void update(javafx.event.ActionEvent actionEvent) throws IOException {
         anchorPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateMenu.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
+        SceneController sceneController = new SceneController();
+
     }
 
 
@@ -66,6 +70,4 @@ public class MainController {
         anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
     }
-
-
 }

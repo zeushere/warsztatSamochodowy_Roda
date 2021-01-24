@@ -111,5 +111,6 @@ public class WlascicielController implements Initializable {
             throwables.printStackTrace();
         }
     }
+
 }
 

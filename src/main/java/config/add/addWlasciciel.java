@@ -1,14 +1,18 @@
 package config.add;
 
+import config.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -29,7 +33,7 @@ public class addWlasciciel {
 
 
     private Connection connection;
-    public void addWlasciciel(ActionEvent actionEvent) throws SQLException {
+    public void addWlasciciel(ActionEvent actionEvent) throws SQLException, IOException {
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
         if (!(wlascicielAddImie.getText().equals("")) && !(wlascicielAddNazwisko.getText().equals("")) && !(wlascicielAddMarkaSamochodu.getText().equals("")) && !(wlascicielAddModelSamochodu.getText().equals(""))) {
@@ -40,10 +44,22 @@ public class addWlasciciel {
                     +wlascicielAddModelSamochodu.getText() +"')";
             int execute = connection.createStatement().executeUpdate(query);
             if (execute>0) {
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                alert.showAndWait();
+
                 wlascicielAddImie.clear();
                 wlascicielAddNazwisko.clear();
                 wlascicielAddMarkaSamochodu.clear();
                 wlascicielAddModelSamochodu.clear();
+
+                Stage thisStage = (Stage) wlascicielAddModelSamochodu.getScene().getWindow();
+                Scene thisScene = wlascicielAddModelSamochodu.getScene();
+
+                SceneController sceneController = new SceneController(thisStage, thisScene);
+
             }
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);

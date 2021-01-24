@@ -1,11 +1,14 @@
 package config.del;
 
+import config.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -57,9 +60,22 @@ public class delNaprawa implements Initializable {
             String query = "DELETE FROM naprawa WHERE id_naprawy=" + id;
             int ex = connection.createStatement().executeUpdate(query);
             if (ex > 0) {
+
+                naprawaSelect();
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                alert.showAndWait();
+
                 listNaprawa.clear();
                 naprawaSelect.getItems().clear();
-                naprawaSelect();
+
+                Stage thisStage = (Stage) naprawaSelect.getScene().getWindow();
+                Scene thisScene = naprawaSelect.getScene();
+
+                SceneController sceneController = new SceneController(thisStage, thisScene);
+
             }
         }
         catch (Exception ex)

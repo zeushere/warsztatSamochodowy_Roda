@@ -1,11 +1,23 @@
 package config.update;
 
+import config.MainController;
+import config.NaprawaController;
+import config.SceneController;
+import config.WlascicielController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+import jdk.jfr.internal.tool.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -18,6 +30,10 @@ public class updateWlasciciel implements Initializable {
 
     @FXML
     private ComboBox selectWlasciciel;
+
+    @FXML
+    private AnchorPane anchorPane;
+
 
     @FXML
     private TextField wlascicielUpdateImie;
@@ -125,7 +141,7 @@ public class updateWlasciciel implements Initializable {
 
     }
 
-    public void updateWlasciciel(ActionEvent actionEvent) throws SQLException {
+    public void updateWlasciciel(ActionEvent actionEvent) throws SQLException, IOException {
 
 
         int idWlasciciela = (int) listWlasciciel.get(selectWlasciciel.getSelectionModel().getSelectedIndex());
@@ -263,10 +279,26 @@ public class updateWlasciciel implements Initializable {
                         if(rowsCount>0)
                         {
                             wlascicielUpdateModelSamochodu.clear();
+
+
                         }
                     }
                 }
+
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                alert.showAndWait();
+
+
+                Stage thisStage = (Stage) wlascicielUpdateMarkaSamochodu.getScene().getWindow();
+                Scene thisScene = wlascicielUpdateMarkaSamochodu.getScene();
+
+                SceneController sceneController = new SceneController(thisStage,thisScene);
             }
+
+
          else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");

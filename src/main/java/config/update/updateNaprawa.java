@@ -1,11 +1,15 @@
 package config.update;
 
+import config.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -94,85 +98,88 @@ public class updateNaprawa implements Initializable {
         }
     }
 
-    public void naprawaUpdate(ActionEvent actionEvent) throws SQLException{
+    public void naprawaUpdate(ActionEvent actionEvent) throws SQLException, IOException {
 
         int idNaprawy = (int) listNaprawa.get(selectNaprawa.getSelectionModel().getSelectedIndex());
 
 
-        if (naprawaUpdateKosztNaprawy.isDisable() == false || naprawaUpdateDataNaprawy.isDisable() == false)
+        if (naprawaUpdateKosztNaprawy.isDisable() == false || naprawaUpdateDataNaprawy.isDisable() == false) {
+            if (naprawaUpdateKosztNaprawy.isDisable() == false) {
 
-        {
-        if (naprawaUpdateKosztNaprawy.isDisable() == false)
-
-        {
-
-        if(naprawaUpdateKosztNaprawy.getText().equals("") || naprawaUpdateKosztNaprawy.getText().charAt(0) == ' ')
-        {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Błąd!");
-        alert.setHeaderText("Nie wpisano poprawnie kosztu usługi!");
-        alert.showAndWait();
-        }
-
-        else {
-        DbConnect dbConnect = new DbConnect();
-        connection = dbConnect.getConnection();
+                if (naprawaUpdateKosztNaprawy.getText().equals("") || naprawaUpdateKosztNaprawy.getText().charAt(0) == ' ') {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Błąd!");
+                    alert.setHeaderText("Nie wpisano poprawnie kosztu usługi!");
+                    alert.showAndWait();
+                } else {
+                    DbConnect dbConnect = new DbConnect();
+                    connection = dbConnect.getConnection();
 
 
-        Statement zmiana = connection.createStatement();
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("UPDATE naprawa SET koszt_naprawy = '");
-        stringBuilder.append(naprawaUpdateKosztNaprawy.getText());
-        stringBuilder.append("'");
-        stringBuilder.append("WHERE id_naprawy=");
-        stringBuilder.append(idNaprawy);
+                    Statement zmiana = connection.createStatement();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append("UPDATE naprawa SET koszt_naprawy = '");
+                    stringBuilder.append(naprawaUpdateKosztNaprawy.getText());
+                    stringBuilder.append("'");
+                    stringBuilder.append("WHERE id_naprawy=");
+                    stringBuilder.append(idNaprawy);
 
-        int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+                    int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
 
-        if(rowsCount>0)
-        {
-            naprawaUpdateKosztNaprawy.clear();
-        }
+                    if (rowsCount > 0) {
+                        naprawaUpdateKosztNaprawy.clear();
+                    }
 
-        }
-        }
-
-        if (naprawaUpdateDataNaprawy.isDisable() == false) {
-
-        try{
-
-            LocalDate dataNaprawy = naprawaUpdateDataNaprawy.getValue();
-
-                DbConnect dbConnect = new DbConnect();
-                connection = dbConnect.getConnection();
-
-
-                Statement zmiana = connection.createStatement();
-                StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append("UPDATE naprawa SET data_naprawy = '");
-                stringBuilder.append(dataNaprawy);
-                stringBuilder.append("'");
-                stringBuilder.append("WHERE id_naprawy=");
-                stringBuilder.append(idNaprawy);
-
-                int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
-
-                if (rowsCount>0)
-                {
-                    naprawaUpdateDataNaprawy.getEditor().clear();
                 }
+            }
 
-        }
+            if (naprawaUpdateDataNaprawy.isDisable() == false) {
 
-        catch(Exception ex)
-        {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Błąd!");
-            alert.setHeaderText("Nie wybrano poprawnie daty naprawy!");
+                try {
+
+                    LocalDate dataNaprawy = naprawaUpdateDataNaprawy.getValue();
+
+                    DbConnect dbConnect = new DbConnect();
+                    connection = dbConnect.getConnection();
+
+
+                    Statement zmiana = connection.createStatement();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append("UPDATE naprawa SET data_naprawy = '");
+                    stringBuilder.append(dataNaprawy);
+                    stringBuilder.append("'");
+                    stringBuilder.append("WHERE id_naprawy=");
+                    stringBuilder.append(idNaprawy);
+
+                    int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                    if (rowsCount > 0) {
+                        naprawaUpdateDataNaprawy.getEditor().clear();
+                    }
+
+                } catch (Exception ex) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Błąd!");
+                    alert.setHeaderText("Nie wybrano poprawnie daty naprawy!");
+                    alert.showAndWait();
+                }
+            }
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Informacja");
+            alert.setHeaderText("Pomyślnie wykonano polecenie!");
             alert.showAndWait();
+
+
+            Stage thisStage = (Stage) updateCheckboxKosztNaprawy.getScene().getWindow();
+            Scene thisScene = updateCheckboxKosztNaprawy.getScene();
+
+            SceneController sceneController = new SceneController(thisStage, thisScene);
+
         }
-        }
-        }
+
+
+
         else {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Błąd!");

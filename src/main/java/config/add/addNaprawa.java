@@ -1,13 +1,16 @@
 package config.add;
 
+import config.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -90,14 +93,26 @@ public class addNaprawa implements Initializable {
                         + idUslugi + "')";
                 int execute = connection.createStatement().executeUpdate(query);
                 if (execute > 0) {
+
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Informacja");
+                    alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                    alert.showAndWait();
+
                     naprawaSelectWlasciciel.getItems().clear();
                     listWlasciciel.clear();
                     naprawaSelectWlasciciel();
                     naprawaSelectUsluga.getItems().clear();
                     listUsluga.clear();
                     naprawaSelectUsluga();
-                    naprawaData.setValue(null);
+                    naprawaData.getEditor().clear();
                     naprawaKoszt.clear();
+
+                    Stage thisStage = (Stage) naprawaKoszt.getScene().getWindow();
+                    Scene thisScene = naprawaKoszt.getScene();
+
+                    SceneController sceneController = new SceneController(thisStage, thisScene);
+
 
                 }
             } else {
