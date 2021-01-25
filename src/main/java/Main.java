@@ -1,3 +1,4 @@
+import com.sun.javafx.css.StyleManager;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -24,13 +25,14 @@ public class Main extends Application {
         Scene scene = new Scene(anchorPane);
 
 
-        String pathName = "C:\\Users\\zeushere\\Desktop\\warsztatSamochodowy_Roda\\src\\main\\java\\styles.css";
+        String pathName = "src/main/java/stylesheets/styles.css";
         File file = new File(pathName);
         if (file.exists()) {
             scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
         } else {
             System.out.println("Could not find css file: "+pathName);
         }
+
 
         stage.setScene(scene);
         stage.show();

@@ -1,3 +1,78 @@
-#btnForgot{
-    -fx-background-color: fuchsia;
+.root
+{
+
 }
+
+.button:hover{
+    -fx-background-color: blue;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: lime;
+    -fx-font-size: 16px;
+
+}
+
+#btnForgot
+{
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button
+{
+    -fx-background-color: blue;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#btnForgot:hover
+{
+    -fx-text-fill: lime;
+}
+
+
+#anchorPaneIntro Label
+{
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+Separator
+{
+    -fx-border-color:red
+}
+
+#or
+{
+    -fx-font-weight: bold;
+}
+
+TextField
+{
+    -fx-border-color: gold;
+    -fx-border-width: 2px;
+    -fx-alignment: center;
+}
+
+
+PasswordField
+{
+    -fx-alignment: center;
+    -fx-background-color: white;
+    -fx-border-color: gold;
+    -fx-border-width: 2px;
+}
+
+PasswordField:hover
+{
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: gold;
+}
+

@@ -31,6 +31,10 @@
             <font>
                 <Font name="System Bold" size="18.0" />
             </font></Label>
+        <Separator layoutX="154.0" layoutY="13.0" maxHeight="3.0" minHeight="3.0" prefHeight="3.0" prefWidth="830.0" />
+        <Separator layoutX="57.0" layoutY="45.0" maxWidth="3.0" minWidth="3.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="3.0" />
+
+
     </children>
 
 </AnchorPane>

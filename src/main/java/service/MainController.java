@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class MainController{
@@ -71,6 +72,13 @@ public class MainController{
         Node node = (Node) actionEvent.getSource();
         stage = (Stage) node.getScene().getWindow();
         Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml")));
+        String pathName = "src/main/java/stylesheets/styles.css";
+        File file = new File(pathName);
+        if (file.exists()) {
+            scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
+        } else {
+            System.out.println("Could not find css file: "+pathName);
+        }
         stage.setScene(scene);
         stage.show();
 

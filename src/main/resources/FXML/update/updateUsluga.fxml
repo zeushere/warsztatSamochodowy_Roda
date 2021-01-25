@@ -17,6 +17,8 @@
             <CheckBox fx:id="updateCheckboxNazwaUslugi" layoutX="287.0" layoutY="213.0" mnemonicParsing="false" onAction="#checkBoxNazwaUslugi" />
             <CheckBox fx:id="updateCheckboxRodzajUslugi" layoutX="287.0" layoutY="283.0" mnemonicParsing="false" onAction="#checkBoxRodzajUslugi" />
             <Text layoutX="117.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz usługę do aktualizacji" />
+
+
          </children>
       </Pane>
    </children>

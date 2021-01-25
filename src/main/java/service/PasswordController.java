@@ -13,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.URL;
@@ -60,6 +61,15 @@ public class PasswordController implements Initializable {
             Stage stage = (Stage) node.getScene().getWindow();
             stage.close();
             Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/login.fxml")));
+
+            String pathName = "src/main/java/stylesheets/styles.css";
+            File file = new File(pathName);
+            if (file.exists()) {
+                scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
+            } else {
+                System.out.println("Could not find css file: "+pathName);
+            }
+
             stage.setScene(scene);
             stage.show();
 
@@ -140,6 +150,15 @@ public class PasswordController implements Initializable {
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.close();
                 Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/login.fxml")));
+
+                String pathName = "src/main/java/stylesheets/styles.css";
+                File file = new File(pathName);
+                if (file.exists()) {
+                    scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
+                } else {
+                    System.out.println("Could not find css file: "+pathName);
+                }
+
                 stage.setScene(scene);
                 stage.show();
 
