@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.MainController">
+<AnchorPane prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.MainController">
    <children>
       <HBox alignment="TOP_CENTER" layoutX="324.0" prefHeight="66.0" prefWidth="682.0">
          <children>
@@ -27,16 +27,32 @@
             </Button>
          </children>
       </HBox>
-      <Pane fx:id="wyswietl" layoutX="189.0" layoutY="67.0" prefHeight="372.0" prefWidth="1010.0">
+      <Pane fx:id="wyswietl" layoutX="189.0" layoutY="67.0" prefHeight="372.0" prefWidth="1006.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
-         </cursor></Pane>
-      <Label alignment="CENTER" layoutX="9.0" layoutY="141.0" prefHeight="18.0" prefWidth="150.0" text="Wybierz działanie" textAlignment="CENTER">
+         </cursor>
+         <children>
+            <Label contentDisplay="CENTER" layoutX="460.0" layoutY="27.0" text="Strona główna">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text layoutX="97.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aplikacja warsztatu samochodowego, to okienkowa aplikacja umożliwiająca pracę na bazie danych za pomocą wygodnego w obsłudze GUI. Za pośrednictwem aplikacji jesteśmy w stanie wykonywać na tabelach operacje dodawania, usuwania, aktualizowania oraz wyszukiwania rekordów. Aplikacja oparta jest na czterech tabelach: &quot;Usługa&quot;, &quot;Właściciel&quot;, &quot;Naprawa&quot;, &quot;Użytkownik&quot;, które ściśle ze sobą powiązane, zapewniają odpowiednią normalizację danych." textAlignment="JUSTIFY" wrappingWidth="816.11962890625">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="141.0" prefHeight="18.0" prefWidth="150.0" text="Wybierz działanie" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Button layoutX="9.0" layoutY="227.0" mnemonicParsing="false" onAction="#add" prefWidth="150.0" text="Dodawanie" />
-      <Button layoutX="9.0" layoutY="306.0" mnemonicParsing="false" onAction="#del" prefWidth="150.0" text="Usuwanie" />
-      <Button layoutX="9.0" layoutY="378.0" mnemonicParsing="false" onAction="#update" prefWidth="150.0" text="Aktualizacja" />
+      <Button layoutX="20.0" layoutY="227.0" mnemonicParsing="false" onAction="#add" prefWidth="150.0" text="Dodawanie" />
+      <Button layoutX="20.0" layoutY="306.0" mnemonicParsing="false" onAction="#del" prefWidth="150.0" text="Usuwanie" />
+      <Button layoutX="20.0" layoutY="378.0" mnemonicParsing="false" onAction="#update" prefWidth="150.0" text="Aktualizacja" />
+      <Button layoutX="1027.0" layoutY="20.0" mnemonicParsing="false" onAction="#mainMenu" prefWidth="150.0" text="Strona główna" />
    </children>
 </AnchorPane>

@@ -3,6 +3,7 @@ package config;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -56,7 +57,6 @@ public class MainController{
     public void update(javafx.event.ActionEvent actionEvent) throws IOException {
         anchorPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateMenu.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
-        SceneController sceneController = new SceneController();
 
     }
 
@@ -69,5 +69,16 @@ public class MainController{
     public void del(ActionEvent actionEvent) throws IOException{
         anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
         wyswietl.getChildren().setAll(anchorPane);
+    }
+
+    public void mainMenu(ActionEvent actionEvent) throws IOException {
+
+        Node node = (Node) actionEvent.getSource();
+        stage = (Stage) node.getScene().getWindow();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml")));
+        stage.setScene(scene);
+        stage.show();
+
+
     }
 }
