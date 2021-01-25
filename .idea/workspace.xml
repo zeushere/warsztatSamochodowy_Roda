@@ -7,38 +7,10 @@
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stylesheets/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/password.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/update/updateMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/update/updateMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/update/updateUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/update/updateUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/add/addMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/del/delMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/password.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/update/updateMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/update/updateMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/update/updateUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/update/updateUsluga.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/connect/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connect/DbConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoginController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PasswordController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PasswordController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/RegisterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/RegisterController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/connect/DbConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/connect/DbConnect.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +114,7 @@
       <workItem from="1611393924703" duration="11875000" />
       <workItem from="1611405835623" duration="92000" />
       <workItem from="1611405944079" duration="12984000" />
-      <workItem from="1611491364508" duration="45048000" />
+      <workItem from="1611491364508" duration="46959000" />
     </task>
     <servers />
   </component>

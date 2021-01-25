@@ -1,4 +1,3 @@
-import com.sun.javafx.css.StyleManager;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
