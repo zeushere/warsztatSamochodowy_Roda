@@ -6,7 +6,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-import java.io.IOException;
+import java.io.File;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -22,8 +22,22 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/FXML/login.fxml"));
         AnchorPane anchorPane = fxmlLoader.load();
         Scene scene = new Scene(anchorPane);
+
+
+        String pathName = "C:\\Users\\zeushere\\Desktop\\warsztatSamochodowy_Roda\\src\\main\\java\\styles.css";
+        File file = new File(pathName);
+        if (file.exists()) {
+            scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
+        } else {
+            System.out.println("Could not find css file: "+pathName);
+        }
+
         stage.setScene(scene);
         stage.show();
+
+
+
+
 
 
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {

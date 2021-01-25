@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.geometry.Insets?>
-<AnchorPane prefHeight="372.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="config.del.delMenu">
+<AnchorPane prefHeight="372.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.del.delMenu">
     <children>
         <VBox layoutX="164.0" layoutY="112.0" prefHeight="280.0" prefWidth="200.0">
             <children>
@@ -29,7 +29,7 @@
         <Pane fx:id="pane" layoutX="453.0" prefHeight="400.0" prefWidth="470.0" />
         <Label layoutX="164.0" layoutY="59.0" text="Wybierz co chcesz usunąć">
             <font>
-                <Font size="18.0" />
+                <Font name="System Bold" size="18.0" />
             </font></Label>
     </children>
 
