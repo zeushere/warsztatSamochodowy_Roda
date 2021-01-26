@@ -2,7 +2,9 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -20,8 +22,8 @@ public class Main extends Application {
         stage.setTitle("Warsztat Samochodowy");
 
         FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/FXML/login.fxml"));
-        AnchorPane anchorPane = fxmlLoader.load();
-        Scene scene = new Scene(anchorPane);
+        SplitPane splitPane = fxmlLoader.load();
+        Scene scene = new Scene(splitPane);
 
 
         String pathName = "src/main/java/stylesheets/styles.css";
