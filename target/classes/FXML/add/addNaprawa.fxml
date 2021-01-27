@@ -14,18 +14,18 @@
       <Pane prefHeight="400.0" prefWidth="470.0">
          <children>
             <ComboBox fx:id="naprawaSelectWlasciciel" layoutX="121.0" layoutY="59.0" prefWidth="150.0" />
-            <ComboBox fx:id="naprawaSelectUsluga" layoutX="121.0" layoutY="129.0" prefWidth="150.0" />
-            <DatePicker fx:id="naprawaData" layoutX="121.0" layoutY="272.0" promptText="dd.mm.rrrr">
+            <ComboBox fx:id="naprawaSelectUsluga" layoutX="121.0" layoutY="121.0" prefWidth="150.0" />
+            <DatePicker fx:id="naprawaData" layoutX="121.0" layoutY="250.0" promptText="dd.mm.rrrr">
                <tooltip>
                   <Tooltip text="Data nie może być z przeszłości!" />
                </tooltip></DatePicker>
-            <Button layoutX="125.0" layoutY="324.0" mnemonicParsing="false" onAction="#naprawaAdd" text="Dodaj" />
+            <Button layoutX="125.0" layoutY="293.0" mnemonicParsing="false" onAction="#naprawaAdd" text="Dodaj" />
             <Text layoutX="123.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wlasciciel" />
-            <Text layoutX="129.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usługa" />
+            <Text layoutX="130.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usługa" />
             <Text layoutX="122.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-            <Text layoutX="125.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data naprawy" />
-            <Text layoutX="123.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koszt naprawy" />
-            <TextField fx:id="naprawaKoszt" layoutX="122.0" layoutY="208.0" />
+            <Text layoutX="125.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data naprawy" />
+            <Text layoutX="123.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koszt naprawy" />
+            <TextField fx:id="naprawaKoszt" layoutX="123.0" layoutY="181.0" />
          </children>
       </Pane>
    </children>

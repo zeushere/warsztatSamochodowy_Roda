@@ -20,8 +20,8 @@
             <Text layoutX="119.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko właściciela" />
             <TextField fx:id="wlascicielUpdateNazwisko" layoutX="123.0" layoutY="157.0" />
             <CheckBox fx:id="updateCheckboxNazwiskoWlasciciela" layoutX="286.0" layoutY="161.0" mnemonicParsing="false" onAction="#checkBoxNazwiskoWlasciciela" />
-            <TextField fx:id="wlascicielUpdateMarkaSamochodu" layoutX="123.0" layoutY="205.0" />
             <Text layoutX="119.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marka samochodu właściciela" />
+            <TextField fx:id="wlascicielUpdateMarkaSamochodu" layoutX="123.0" layoutY="205.0" />
             <CheckBox fx:id="updateCheckboxMarkaSamochoduWlasciciela" layoutX="286.0" layoutY="209.0" mnemonicParsing="false" onAction="#checkBoxMarkaSamochoduWlasciciela" />
             <Text layoutX="119.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Model samochodu właściciela" />
             <TextField fx:id="wlascicielUpdateModelSamochodu" layoutX="123.0" layoutY="258.0" />

@@ -19,8 +19,8 @@
             <CheckBox fx:id="updateCheckboxNazwaUslugi" layoutX="294.0" layoutY="148.0" mnemonicParsing="false" onAction="#checkBoxNazwaUslugi" />
             <Text layoutX="129.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rodzaj usługi" />
             <Button fx:id="updateUslugaButton" layoutX="141.0" layoutY="251.0" mnemonicParsing="false" onAction="#updateUsluga" text="Zaktualizuj usługę" />
-            <CheckBox fx:id="updateCheckboxRodzajUslugi" layoutX="294.0" layoutY="216.0" mnemonicParsing="false" onAction="#checkBoxRodzajUslugi" />
             <TextField fx:id="uslugaUpdateRodzaj" layoutX="129.0" layoutY="212.0" />
+            <CheckBox fx:id="updateCheckboxRodzajUslugi" layoutX="294.0" layoutY="216.0" mnemonicParsing="false" onAction="#checkBoxRodzajUslugi" />
          </children>
       </Pane>
    </children>

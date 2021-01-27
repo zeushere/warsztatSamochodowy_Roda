@@ -58,13 +58,13 @@ public class MainController{
 
 
     public void add(ActionEvent actionEvent) throws IOException{
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addMenu.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/add/addMenu.fxml"));
+        wyswietl.getChildren().setAll(splitPane);
     }
 
     public void del(ActionEvent actionEvent) throws IOException{
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
+        wyswietl.getChildren().setAll(splitPane);
     }
 
     public void mainMenu(ActionEvent actionEvent) throws IOException {
