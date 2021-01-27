@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="" />
+    <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FXML/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/register.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +68,7 @@
       <recent name="config.add" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.warsztatSamochodowy_Roda.jar">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="warsztatSamochodowy_Roda" />
@@ -72,24 +76,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="warsztatSamochodowy_Roda.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/warsztatSamochodowy_Roda_jar/warsztatSamochodowy_Roda.jar" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.warsztatSamochodowy_Roda.jar" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -118,6 +106,7 @@
       <workItem from="1611491364508" duration="46959000" />
       <workItem from="1611660049264" duration="2000" />
       <workItem from="1611667359802" duration="70000" />
+      <workItem from="1611764949571" duration="2417000" />
     </task>
     <servers />
   </component>
