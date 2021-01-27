@@ -16,6 +16,7 @@ public class updateMenu {
     @FXML
     private Pane pane;
 
+
     public void usluga(ActionEvent actionEvent) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateUsluga.fxml"));
         pane.getChildren().setAll(anchorPane);

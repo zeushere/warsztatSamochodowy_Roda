@@ -5,6 +5,7 @@ import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -18,6 +19,10 @@ public class MainController{
 
     @FXML
     private Stage stage;
+
+    @FXML
+    private Scene scene;
+
     @FXML
     private GridPane gridPane;
 
@@ -46,30 +51,35 @@ public class MainController{
     }
 
     public void update(javafx.event.ActionEvent actionEvent) throws IOException {
-        gridPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateMenu.fxml"));
-        wyswietl.getChildren().setAll(gridPane);
+        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateMenu.fxml"));
+        wyswietl.getChildren().setAll(splitPane);
 
     }
 
 
     public void add(ActionEvent actionEvent) throws IOException{
-        gridPane = FXMLLoader.load(getClass().getResource("/FXML/add/addMenu.fxml"));
-        wyswietl.getChildren().setAll(gridPane);
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addMenu.fxml"));
+        wyswietl.getChildren().setAll(anchorPane);
     }
 
     public void del(ActionEvent actionEvent) throws IOException{
-        gridPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
-        wyswietl.getChildren().setAll(gridPane);
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
+        wyswietl.getChildren().setAll(anchorPane);
     }
 
     public void mainMenu(ActionEvent actionEvent) throws IOException {
 
-        gridPane = FXMLLoader.load(getClass().getResource("/FXML/main.fxml"));
-        wyswietl.getChildren().setAll(gridPane);
+
 
         Node node = (Node) actionEvent.getSource();
         stage = (Stage) node.getScene().getWindow();
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml")));
+
+
+
+        scene=(Scene) node.getScene();
+
+
+        scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml")));
         String pathName = "src/main/java/stylesheets/styles.css";
         File file = new File(pathName);
         if (file.exists()) {
@@ -77,7 +87,14 @@ public class MainController{
         } else {
             System.out.println("Could not find css file: "+pathName);
         }
+
+
         stage.setScene(scene);
+
+
+
+
+
         stage.show();
 
 

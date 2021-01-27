@@ -1,8 +1,12 @@
 .root
 {
-
+    -fx-background-color: white;
 }
 
+splitPane
+{
+    -fx-box-border: transparent;
+}
 .button:hover{
     -fx-background-color: blue;
     -fx-border-width: 2px;
