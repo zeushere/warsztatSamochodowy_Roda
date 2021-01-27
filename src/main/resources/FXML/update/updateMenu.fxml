@@ -48,7 +48,7 @@
             <Insets />
          </opaqueInsets>
       </GridPane>
-        <Pane fx:id="pane" prefHeight="313.0" prefWidth="478.0">
+        <Pane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="313.0" prefWidth="478.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets></Pane>

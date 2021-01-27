@@ -24,9 +24,6 @@ public class updateWlasciciel implements Initializable {
     @FXML
     private ComboBox selectWlasciciel;
 
-    @FXML
-    private AnchorPane anchorPane;
-
 
     @FXML
     private TextField wlascicielUpdateImie;
