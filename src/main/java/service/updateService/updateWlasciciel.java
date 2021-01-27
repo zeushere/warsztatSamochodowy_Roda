@@ -1,6 +1,5 @@
 package service.updateService;
 
-import service.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import service.SceneController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -82,10 +82,9 @@ public class updateWlasciciel implements Initializable {
         }
     }
 
-    public void selectWlascicielAction(ActionEvent actionEvent) throws SQLException{
+    public void selectWlascicielAction(ActionEvent actionEvent) throws SQLException {
 
-        if(selectWlasciciel.getSelectionModel().isEmpty() == false)
-        {
+        if (selectWlasciciel.getSelectionModel().isEmpty() == false) {
             updateWlascicielButton.setDisable(false);
         }
     }
@@ -137,58 +136,46 @@ public class updateWlasciciel implements Initializable {
         int idWlasciciela = (int) listWlasciciel.get(selectWlasciciel.getSelectionModel().getSelectedIndex());
 
 
-        if (wlascicielUpdateImie.isDisable() == false || wlascicielUpdateNazwisko.isDisable() == false || wlascicielUpdateModelSamochodu.isDisable() == false || wlascicielUpdateMarkaSamochodu.isDisable() == false)
-
-            {
-                if (wlascicielUpdateImie.isDisable() == false)
-
-                    {
+        if (wlascicielUpdateImie.isDisable() == false || wlascicielUpdateNazwisko.isDisable() == false || wlascicielUpdateModelSamochodu.isDisable() == false || wlascicielUpdateMarkaSamochodu.isDisable() == false) {
+            if (wlascicielUpdateImie.isDisable() == false) {
 
 
-                        if(wlascicielUpdateImie.getText().equals("") || wlascicielUpdateImie.getText().charAt(0) == ' ')
-                        {
-                            Alert alert = new Alert(Alert.AlertType.ERROR);
-                            alert.setTitle("Błąd!");
-                            alert.setHeaderText("Nie wpisano poprawnie imienia właściciela!");
-                            alert.showAndWait();
-                        }
-
-                        else {
-                            DbConnect dbConnect = new DbConnect();
-                            connection = dbConnect.getConnection();
+                if (wlascicielUpdateImie.getText().equals("") || wlascicielUpdateImie.getText().charAt(0) == ' ') {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Błąd!");
+                    alert.setHeaderText("Nie wpisano poprawnie imienia właściciela!");
+                    alert.showAndWait();
+                } else {
+                    DbConnect dbConnect = new DbConnect();
+                    connection = dbConnect.getConnection();
 
 
-                            Statement zmiana = connection.createStatement();
-                            StringBuilder stringBuilder = new StringBuilder();
-                            stringBuilder.append("UPDATE wlasciciel SET imie_wlasciciela = '");
-                            stringBuilder.append(wlascicielUpdateImie.getText());
-                            stringBuilder.append("'");
-                            stringBuilder.append("WHERE id_wlasciciela=");
-                            stringBuilder.append(idWlasciciela);
+                    Statement zmiana = connection.createStatement();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append("UPDATE wlasciciel SET imie_wlasciciela = '");
+                    stringBuilder.append(wlascicielUpdateImie.getText());
+                    stringBuilder.append("'");
+                    stringBuilder.append("WHERE id_wlasciciela=");
+                    stringBuilder.append(idWlasciciela);
 
-                            int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+                    int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
 
-                            if(rowsCount>0)
-                            {
-                                wlascicielUpdateImie.clear();
-                                czyWykonane = 1;
-                            }
-                        }
-                }
-
-                if (wlascicielUpdateNazwisko.isDisable() == false) {
-
-                    if(wlascicielUpdateNazwisko.getText().equals("") || wlascicielUpdateNazwisko.getText().charAt(0) == ' ')
-                    {
-
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Błąd!");
-                        alert.setHeaderText("Nie wpisano poprawnie nazwiska właściciela!");
-                        alert.showAndWait();
+                    if (rowsCount > 0) {
+                        wlascicielUpdateImie.clear();
+                        czyWykonane = 1;
                     }
+                }
+            }
 
-                        else
-                        {
+            if (wlascicielUpdateNazwisko.isDisable() == false) {
+
+                if (wlascicielUpdateNazwisko.getText().equals("") || wlascicielUpdateNazwisko.getText().charAt(0) == ' ') {
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Błąd!");
+                    alert.setHeaderText("Nie wpisano poprawnie nazwiska właściciela!");
+                    alert.showAndWait();
+                } else {
                     DbConnect dbConnect = new DbConnect();
                     connection = dbConnect.getConnection();
 
@@ -203,99 +190,88 @@ public class updateWlasciciel implements Initializable {
 
                     int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
 
-                    if(rowsCount>0)
-                    {
+                    if (rowsCount > 0) {
                         wlascicielUpdateNazwisko.clear();
                         czyWykonane = 1;
                     }
-                    }
                 }
-
-
-                if (wlascicielUpdateMarkaSamochodu.isDisable() == false) {
-
-                    if(wlascicielUpdateMarkaSamochodu.getText().equals("") || wlascicielUpdateMarkaSamochodu.getText().charAt(0) == ' ')
-                    {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Błąd!");
-                        alert.setHeaderText("Nie wpisano poprawnie marki samochodu!");
-                        alert.showAndWait();
-                    }
-                    else {
-                        DbConnect dbConnect = new DbConnect();
-                        connection = dbConnect.getConnection();
-
-
-                        Statement zmiana = connection.createStatement();
-                        StringBuilder stringBuilder = new StringBuilder();
-                        stringBuilder.append("UPDATE wlasciciel SET marka_samochodu_wlasciciela = '");
-                        stringBuilder.append(wlascicielUpdateMarkaSamochodu.getText());
-                        stringBuilder.append("'");
-                        stringBuilder.append("WHERE id_wlasciciela=");
-                        stringBuilder.append(idWlasciciela);
-
-                        int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
-
-                        if(rowsCount>0)
-                        {
-                            wlascicielUpdateMarkaSamochodu.clear();
-                            czyWykonane = 1;
-                        }
-                    }
-                }
-
-                if (wlascicielUpdateModelSamochodu.isDisable() == false) {
-                    if(wlascicielUpdateModelSamochodu.getText().equals("") || wlascicielUpdateModelSamochodu.getText().charAt(0) == ' ')
-                    {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Błąd!");
-                        alert.setHeaderText("Nie wpisano poprawnie modelu samochodu!");
-                        alert.showAndWait();
-
-
-                    }
-                    else {
-                        DbConnect dbConnect = new DbConnect();
-                        connection = dbConnect.getConnection();
-
-
-                        Statement zmiana = connection.createStatement();
-                        StringBuilder stringBuilder = new StringBuilder();
-                        stringBuilder.append("UPDATE wlasciciel SET model_samochodu_wlasciciela = '");
-                        stringBuilder.append(wlascicielUpdateModelSamochodu.getText());
-                        stringBuilder.append("'");
-                        stringBuilder.append("WHERE id_wlasciciela=");
-                        stringBuilder.append(idWlasciciela);
-
-                        int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
-
-                        if(rowsCount>0)
-                        {
-                            wlascicielUpdateModelSamochodu.clear();
-                            czyWykonane = 1;
-                        }
-                    }
-                }
-
-                if(czyWykonane == 1)
-                {
-
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Informacja");
-                    alert.setHeaderText("Pomyślnie wykonano polecenie!");
-                    alert.showAndWait();
-
-
-                    Stage thisStage = (Stage) wlascicielUpdateMarkaSamochodu.getScene().getWindow();
-                    Scene thisScene = wlascicielUpdateMarkaSamochodu.getScene();
-
-                    SceneController sceneController = new SceneController(thisStage,thisScene);
-                }
-
             }
 
 
-         else {
+            if (wlascicielUpdateMarkaSamochodu.isDisable() == false) {
+
+                if (wlascicielUpdateMarkaSamochodu.getText().equals("") || wlascicielUpdateMarkaSamochodu.getText().charAt(0) == ' ') {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Błąd!");
+                    alert.setHeaderText("Nie wpisano poprawnie marki samochodu!");
+                    alert.showAndWait();
+                } else {
+                    DbConnect dbConnect = new DbConnect();
+                    connection = dbConnect.getConnection();
+
+
+                    Statement zmiana = connection.createStatement();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append("UPDATE wlasciciel SET marka_samochodu_wlasciciela = '");
+                    stringBuilder.append(wlascicielUpdateMarkaSamochodu.getText());
+                    stringBuilder.append("'");
+                    stringBuilder.append("WHERE id_wlasciciela=");
+                    stringBuilder.append(idWlasciciela);
+
+                    int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                    if (rowsCount > 0) {
+                        wlascicielUpdateMarkaSamochodu.clear();
+                        czyWykonane = 1;
+                    }
+                }
+            }
+
+            if (wlascicielUpdateModelSamochodu.isDisable() == false) {
+                if (wlascicielUpdateModelSamochodu.getText().equals("") || wlascicielUpdateModelSamochodu.getText().charAt(0) == ' ') {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Błąd!");
+                    alert.setHeaderText("Nie wpisano poprawnie modelu samochodu!");
+                    alert.showAndWait();
+
+
+                } else {
+                    DbConnect dbConnect = new DbConnect();
+                    connection = dbConnect.getConnection();
+
+
+                    Statement zmiana = connection.createStatement();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append("UPDATE wlasciciel SET model_samochodu_wlasciciela = '");
+                    stringBuilder.append(wlascicielUpdateModelSamochodu.getText());
+                    stringBuilder.append("'");
+                    stringBuilder.append("WHERE id_wlasciciela=");
+                    stringBuilder.append(idWlasciciela);
+
+                    int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
+
+                    if (rowsCount > 0) {
+                        wlascicielUpdateModelSamochodu.clear();
+                        czyWykonane = 1;
+                    }
+                }
+            }
+
+            if (czyWykonane == 1) {
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacja");
+                alert.setHeaderText("Pomyślnie wykonano polecenie!");
+                alert.showAndWait();
+
+
+                Stage thisStage = (Stage) wlascicielUpdateMarkaSamochodu.getScene().getWindow();
+                Scene thisScene = wlascicielUpdateMarkaSamochodu.getScene();
+
+                SceneController sceneController = new SceneController(thisStage, thisScene);
+            }
+
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Nie wybrano nic do zmiany!");

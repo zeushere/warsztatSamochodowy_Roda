@@ -1,6 +1,5 @@
 package service.updateService;
 
-import service.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import service.SceneController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -168,7 +168,7 @@ public class updateNaprawa implements Initializable {
                 }
             }
 
-            if(czyWykonane == 1) {
+            if (czyWykonane == 1) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Informacja");
                 alert.setHeaderText("Pomyślnie wykonano polecenie!");

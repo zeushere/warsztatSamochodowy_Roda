@@ -54,7 +54,7 @@ public class WlascicielController implements Initializable {
             String select = "SELECT * FROM wlasciciel";
             connection = dbConnect.getConnection();
             ResultSet resultSet = connection.createStatement().executeQuery(select);
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Wlasciciel wlasciciel = new Wlasciciel();
                 wlasciciel.setId_wlasciciela(resultSet.getInt("id_wlasciciela"));
                 wlasciciel.setImie_wlasciciela(resultSet.getString("imie_wlasciciela"));
@@ -72,7 +72,7 @@ public class WlascicielController implements Initializable {
 
             FilteredList<Wlasciciel> filteredData = new FilteredList<>(wlasciciele, b -> true);
 
-            filterField.textProperty().addListener((observable,oldValue,newValue)->{
+            filterField.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(wlasciciel -> {
 
                     if (newValue == null || newValue.isEmpty()) {
@@ -82,18 +82,15 @@ public class WlascicielController implements Initializable {
                     // Compare first name and last name of every person with filter text.
                     String lowerCaseFilter = newValue.toLowerCase();
 
-                    if (wlasciciel.getImie_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+                    if (wlasciciel.getImie_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true; // Filter matches first name.
                     } else if (wlasciciel.getNazwisko_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true; // Filter matches last name.
-                    }
-                    else if(wlasciciel.getMarka_samochodu_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    } else if (wlasciciel.getMarka_samochodu_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                    else if (wlasciciel.getModel_samochodu_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    } else if (wlasciciel.getModel_samochodu_wlasciciela().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                    else
+                    } else
                         return false;
                 });
             });
@@ -106,8 +103,7 @@ public class WlascicielController implements Initializable {
 
             wlascicielTable.setItems(sortedData);
 
-        }
-        catch (SQLException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }

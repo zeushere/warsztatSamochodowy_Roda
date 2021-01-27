@@ -1,16 +1,5 @@
 package service;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.Socket;
-import java.net.URL;
-import java.sql.*;
-import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,7 +12,23 @@ import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;;
+import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+;
 
 public class RegisterController implements Initializable {
 
@@ -57,10 +62,10 @@ public class RegisterController implements Initializable {
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
-    public static  final Pattern VALID_LOGIN_REGEX =
+    public static final Pattern VALID_LOGIN_REGEX =
             Pattern.compile("^[a-zA-Z0-9._-]{4,}$", Pattern.CASE_INSENSITIVE);
 
-    public static  final Pattern VALID_PASSWORD_REGEX =
+    public static final Pattern VALID_PASSWORD_REGEX =
             Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\\w\\s]).{8,}$", Pattern.CASE_INSENSITIVE);
 
     public void btnSignupAction(ActionEvent actionEvent) {
@@ -79,7 +84,7 @@ public class RegisterController implements Initializable {
                 if (file.exists()) {
                     scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
                 } else {
-                    System.out.println("Could not find css file: "+pathName);
+                    System.out.println("Could not find css file: " + pathName);
                 }
                 stage.setScene(scene);
                 stage.show();
@@ -99,32 +104,21 @@ public class RegisterController implements Initializable {
         public void run() {
             if (connected == false) {
 
-                if(hostAvailabilityCheck() == true) {
+                if (hostAvailabilityCheck() == true) {
                     try {
 
-                    }
-                    catch (Exception ex)
-                    {
+                    } catch (Exception ex) {
 
-                    }
-
-                    finally {
+                    } finally {
                         splitPane.setDisable(false);
                     }
-                }
-                else if(hostAvailabilityCheck() == false)
-                {
+                } else if (hostAvailabilityCheck() == false) {
 
-                    try
-                    {
+                    try {
 
-                    }
-                    catch (Exception ex)
-                    {
+                    } catch (Exception ex) {
 
-                    }
-
-                    finally {
+                    } finally {
                         splitPane.setDisable(true);
                     }
 
@@ -133,28 +127,23 @@ public class RegisterController implements Initializable {
         }
     };
 
-    public boolean hostAvailabilityCheck()
-    {
+    public boolean hostAvailabilityCheck() {
 
         boolean available = true;
         try {
-            if (connected == false)
-            {
+            if (connected == false) {
                 (s = new Socket(SERVER_ADDRESS, TCP_SERVER_PORT)).close();
             }
 
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             available = false;
             s = null;
         }
         return available;
     }
 
-    public void back(ActionEvent actionEvent)
-    {
+    public void back(ActionEvent actionEvent) {
         try {
 
             Node node = (Node) actionEvent.getSource();
@@ -168,7 +157,7 @@ public class RegisterController implements Initializable {
             if (file.exists()) {
                 scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
             } else {
-                System.out.println("Could not find css file: "+pathName);
+                System.out.println("Could not find css file: " + pathName);
             }
 
             stage.setScene(scene);
@@ -187,7 +176,7 @@ public class RegisterController implements Initializable {
 
         Timer timer = new Timer();
 
-        timer.schedule(task,01,1000);
+        timer.schedule(task, 01, 1000);
 
     }
 
@@ -212,17 +201,13 @@ public class RegisterController implements Initializable {
         } else if (matcher.find() == false) {
             setLblError(Color.TOMATO, "Wprowadzony e-mail jest niepoprawny!");
             status = "Error";
-        } else if(matcherLogin.find() == false) {
+        } else if (matcherLogin.find() == false) {
             setLblError(Color.TOMATO, "Wprowadzony login jest niepoprawny!");
             status = "Error";
-        }
-        else if(matcherPassword.find() == false)
-        {
+        } else if (matcherPassword.find() == false) {
             setLblError(Color.TOMATO, "Wprowadzone hasło jest niepoprawne!");
             status = "Error";
-        }
-
-         else {
+        } else {
 
             try {
                 {

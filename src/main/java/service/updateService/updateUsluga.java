@@ -1,6 +1,5 @@
 package service.updateService;
 
-import service.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import service.SceneController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -71,16 +71,15 @@ public class updateUsluga implements Initializable {
         }
     }
 
-    public void selectUslugaAction(ActionEvent actionEvent) throws SQLException{
+    public void selectUslugaAction(ActionEvent actionEvent) throws SQLException {
 
-        if(selectUsluga.getSelectionModel().isEmpty() == false)
-        {
+        if (selectUsluga.getSelectionModel().isEmpty() == false) {
             updateUslugaButton.setDisable(false);
         }
     }
 
 
-    public void checkBoxNazwaUslugi(ActionEvent actionEvent) throws SQLException{
+    public void checkBoxNazwaUslugi(ActionEvent actionEvent) throws SQLException {
 
         if (uslugaUpdateNazwa.isDisable() == true) {
             uslugaUpdateNazwa.setDisable(false);
@@ -90,7 +89,7 @@ public class updateUsluga implements Initializable {
     }
 
 
-    public void checkBoxRodzajUslugi(ActionEvent actionEvent) throws SQLException{
+    public void checkBoxRodzajUslugi(ActionEvent actionEvent) throws SQLException {
 
         if (uslugaUpdateRodzaj.isDisable() == true) {
             uslugaUpdateRodzaj.setDisable(false);
@@ -99,29 +98,23 @@ public class updateUsluga implements Initializable {
         }
 
     }
+
     public void updateUsluga(ActionEvent actionEvent) throws SQLException, IOException {
 
 
         int idUslugi = (int) listUsluga.get(selectUsluga.getSelectionModel().getSelectedIndex());
 
 
-        if (uslugaUpdateNazwa.isDisable() == false || uslugaUpdateRodzaj.isDisable() == false)
-
-        {
-            if (uslugaUpdateNazwa.isDisable() == false)
-
-            {
+        if (uslugaUpdateNazwa.isDisable() == false || uslugaUpdateRodzaj.isDisable() == false) {
+            if (uslugaUpdateNazwa.isDisable() == false) {
 
 
-                if(uslugaUpdateNazwa.getText().equals("") || uslugaUpdateNazwa.getText().charAt(0) == ' ')
-                {
+                if (uslugaUpdateNazwa.getText().equals("") || uslugaUpdateNazwa.getText().charAt(0) == ' ') {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Błąd!");
                     alert.setHeaderText("Nie wpisano poprawnie nazwy usługi!");
                     alert.showAndWait();
-                }
-
-                else {
+                } else {
                     DbConnect dbConnect = new DbConnect();
                     connection = dbConnect.getConnection();
 
@@ -136,8 +129,7 @@ public class updateUsluga implements Initializable {
 
                     int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
 
-                    if(rowsCount>0)
-                    {
+                    if (rowsCount > 0) {
                         uslugaUpdateNazwa.clear();
 
                         czyWykonane = 1;
@@ -147,17 +139,13 @@ public class updateUsluga implements Initializable {
 
             if (uslugaUpdateRodzaj.isDisable() == false) {
 
-                if(uslugaUpdateRodzaj.getText().equals("") || uslugaUpdateRodzaj.getText().charAt(0) == ' ')
-                {
+                if (uslugaUpdateRodzaj.getText().equals("") || uslugaUpdateRodzaj.getText().charAt(0) == ' ') {
 
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Błąd!");
                     alert.setHeaderText("Nie wpisano poprawnie rodzaju usługi!");
                     alert.showAndWait();
-                }
-
-                else
-                {
+                } else {
                     DbConnect dbConnect = new DbConnect();
                     connection = dbConnect.getConnection();
 
@@ -172,8 +160,7 @@ public class updateUsluga implements Initializable {
 
                     int rowsCount = zmiana.executeUpdate(stringBuilder.toString());
 
-                    if(rowsCount>0)
-                    {
+                    if (rowsCount > 0) {
                         uslugaUpdateRodzaj.clear();
 
                         czyWykonane = 1;
@@ -182,8 +169,7 @@ public class updateUsluga implements Initializable {
                 }
             }
 
-            if(czyWykonane == 1)
-            {
+            if (czyWykonane == 1) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Informacja");
                 alert.setHeaderText("Pomyślnie wykonano polecenie!");
@@ -197,8 +183,7 @@ public class updateUsluga implements Initializable {
             }
 
 
-        }
-        else {
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Nie wybrano nic do zmiany!");

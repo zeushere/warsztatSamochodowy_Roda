@@ -53,8 +53,7 @@ public class PasswordController implements Initializable {
             Pattern.compile("^[A-Za-z0-9._%+-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
 
-    public void back(ActionEvent actionEvent)
-    {
+    public void back(ActionEvent actionEvent) {
         try {
 
             Node node = (Node) actionEvent.getSource();
@@ -67,7 +66,7 @@ public class PasswordController implements Initializable {
             if (file.exists()) {
                 scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
             } else {
-                System.out.println("Could not find css file: "+pathName);
+                System.out.println("Could not find css file: " + pathName);
             }
 
             stage.setScene(scene);
@@ -86,32 +85,21 @@ public class PasswordController implements Initializable {
         public void run() {
             if (connected == false) {
 
-                if(hostAvailabilityCheck() == true) {
+                if (hostAvailabilityCheck() == true) {
                     try {
 
-                    }
-                    catch (Exception ex)
-                    {
+                    } catch (Exception ex) {
 
-                    }
-
-                    finally {
+                    } finally {
                         splitPane.setDisable(false);
                     }
-                }
-                else if(hostAvailabilityCheck() == false)
-                {
+                } else if (hostAvailabilityCheck() == false) {
 
-                    try
-                    {
+                    try {
 
-                    }
-                    catch (Exception ex)
-                    {
+                    } catch (Exception ex) {
 
-                    }
-
-                    finally {
+                    } finally {
                         splitPane.setDisable(true);
                     }
 
@@ -120,20 +108,16 @@ public class PasswordController implements Initializable {
         }
     };
 
-    public boolean hostAvailabilityCheck()
-    {
+    public boolean hostAvailabilityCheck() {
 
         boolean available = true;
         try {
-            if (connected == false)
-            {
+            if (connected == false) {
                 (s = new Socket(SERVER_ADDRESS, TCP_SERVER_PORT)).close();
             }
 
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             available = false;
             s = null;
         }
@@ -156,7 +140,7 @@ public class PasswordController implements Initializable {
                 if (file.exists()) {
                     scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
                 } else {
-                    System.out.println("Could not find css file: "+pathName);
+                    System.out.println("Could not find css file: " + pathName);
                 }
 
                 stage.setScene(scene);
@@ -175,7 +159,7 @@ public class PasswordController implements Initializable {
 
         Timer timer = new Timer();
 
-        timer.schedule(task,01,1000);
+        timer.schedule(task, 01, 1000);
 
     }
 
@@ -196,8 +180,7 @@ public class PasswordController implements Initializable {
         } else if (matcher.find() == false) {
             setLblError(Color.TOMATO, "Wprowadzony e-mail jest niepoprawny!");
             status = "Error";
-        }
-         else {
+        } else {
 
             try {
                 {

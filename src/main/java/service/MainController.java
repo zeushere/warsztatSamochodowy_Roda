@@ -1,7 +1,7 @@
 package service;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.*;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
-public class MainController{
+public class MainController {
 
     @FXML
     private Stage stage;
@@ -27,7 +27,6 @@ public class MainController{
 
     @FXML
     private GridPane panelZawartosc;
-
 
 
     public void uslugaTable(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -56,12 +55,12 @@ public class MainController{
     }
 
 
-    public void add(ActionEvent actionEvent) throws IOException{
+    public void add(ActionEvent actionEvent) throws IOException {
         SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/addFXML/addMenu.fxml"));
         panelZawartosc.getChildren().setAll(splitPane);
     }
 
-    public void del(ActionEvent actionEvent) throws IOException{
+    public void del(ActionEvent actionEvent) throws IOException {
         SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/deleteFXML/deleteMenu.fxml"));
         panelZawartosc.getChildren().setAll(splitPane);
     }
@@ -69,13 +68,11 @@ public class MainController{
     public void mainMenu(ActionEvent actionEvent) throws IOException {
 
 
-
         Node node = (Node) actionEvent.getSource();
 
 
-
         stage = (Stage) node.getScene().getWindow();
-        scene=(Scene) node.getScene();
+        scene = (Scene) node.getScene();
 
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/main.fxml"));
@@ -84,15 +81,12 @@ public class MainController{
         stage.getScene().setRoot(root);
 
 
-
-
-
         String pathName = "src/main/java/stylesheets/styles.css";
         File file = new File(pathName);
         if (file.exists()) {
             scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
         } else {
-            System.out.println("Could not find css file: "+pathName);
+            System.out.println("Could not find css file: " + pathName);
         }
 
 

@@ -1,6 +1,5 @@
 package service.deleteService;
 
-import service.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
+import service.SceneController;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -21,7 +21,7 @@ public class deleteNaprawa implements Initializable {
 
     @FXML
     private ComboBox naprawaSelect;
-    
+
     private Connection connection;
     ArrayList listNaprawa = new ArrayList();
 
@@ -37,7 +37,7 @@ public class deleteNaprawa implements Initializable {
             String query = "SELECT *,CONCAT('Wlasciciel: ',wlasciciel.imie_wlasciciela,' '," +
                     "wlasciciel.nazwisko_wlasciciela," +
                     "', Usługa: ',usluga.nazwa_uslugi,', ',usluga.rodzaj_uslugi," +
-                    "', Koszt naprawy: ',koszt_naprawy,'zł' "  +
+                    "', Koszt naprawy: ',koszt_naprawy,'zł' " +
                     "', Data naprawy: ',data_naprawy)as naprawa " +
                     "FROM naprawa INNER JOIN wlasciciel ON naprawa.id_wlasciciela=wlasciciel.id_wlasciciela" +
                     " INNER JOIN usluga ON naprawa.id_uslugi=usluga.id_uslugi";
@@ -77,9 +77,7 @@ public class deleteNaprawa implements Initializable {
                 SceneController sceneController = new SceneController(thisStage, thisScene);
 
             }
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Nie wybrano naprawy do usunięcia!");

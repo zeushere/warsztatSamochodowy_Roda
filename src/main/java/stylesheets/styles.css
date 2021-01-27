@@ -1,13 +1,12 @@
-.root
-{
+.root {
     -fx-background-color: white;
 }
 
-splitPane
-{
+splitPane {
     -fx-box-border: transparent;
 }
-.button:hover{
+
+.button:hover {
     -fx-background-color: blue;
     -fx-border-width: 2px;
     -fx-border-color: black;
@@ -21,8 +20,7 @@ splitPane
     -fx-padding: 0 0 0 0;
 }
 
-#btnForgot
-{
+#btnForgot {
     -fx-border-width: 2px;
     -fx-border-color: black;
     -fx-background-color: blue;
@@ -30,8 +28,7 @@ splitPane
     -fx-font-weight: bold;
 }
 
-.button
-{
+.button {
     -fx-background-color: blue;
     -fx-border-width: 2px;
     -fx-border-color: black;
@@ -39,46 +36,39 @@ splitPane
     -fx-text-fill: white;
 }
 
-#btnForgot:hover
-{
+#btnForgot:hover {
     -fx-text-fill: lime;
 }
 
 
-#anchorPaneIntro Label
-{
+#anchorPaneIntro Label {
     -fx-font-weight: bold;
     -fx-underline: true;
 }
 
-Separator
-{
-    -fx-border-color:red
+Separator {
+    -fx-border-color: red
 }
 
-#or
-{
+#or {
     -fx-font-weight: bold;
 }
 
-TextField
-{
+TextField {
     -fx-border-color: gold;
     -fx-border-width: 2px;
     -fx-alignment: center;
 }
 
 
-PasswordField
-{
+PasswordField {
     -fx-alignment: center;
     -fx-background-color: white;
     -fx-border-color: gold;
     -fx-border-width: 2px;
 }
 
-PasswordField:hover
-{
+PasswordField:hover {
     -fx-background-color: white;
     -fx-border-width: 2px;
     -fx-border-color: gold;

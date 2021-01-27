@@ -52,9 +52,9 @@ public class UslugaController implements Initializable {
         try {
             uslugi = FXCollections.observableArrayList();
             String select = "SELECT * FROM `usluga`";
-            connection=dbConnect.getConnection();
+            connection = dbConnect.getConnection();
             ResultSet resultSet = connection.createStatement().executeQuery(select);
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Usluga usluga = new Usluga();
                 usluga.setId_uslugi(resultSet.getInt("id_uslugi"));
                 usluga.setNazwa_uslugi(resultSet.getString("nazwa_uslugi"));
@@ -76,13 +76,11 @@ public class UslugaController implements Initializable {
 
                     String lowerCaseFilter = newValue.toLowerCase();
 
-                    if (usluga.getNazwa_uslugi().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+                    if (usluga.getNazwa_uslugi().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                     else if (usluga.getRodzaj_uslugi().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                    return true;
-                }
-                        else {
+                    } else if (usluga.getRodzaj_uslugi().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                        return true;
+                    } else {
                         return false;
                     }
                 });

@@ -1,14 +1,5 @@
 package service;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.Socket;
-import java.net.URL;
-import java.sql.*;
-import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +13,21 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;;
+import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
+
+;
 
 public class LoginController implements Initializable {
 
@@ -39,7 +44,7 @@ public class LoginController implements Initializable {
     private Button btnSignin;
 
     @FXML
-    private  Label btnForgot;
+    private Label btnForgot;
 
     @FXML
     private Button btnSignup;
@@ -72,7 +77,7 @@ public class LoginController implements Initializable {
                     if (file.exists()) {
                         scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
                     } else {
-                        System.out.println("Could not find css file: "+pathName);
+                        System.out.println("Could not find css file: " + pathName);
                     }
 
                     stage.setScene(scene);
@@ -87,39 +92,28 @@ public class LoginController implements Initializable {
     }
 
 
-     TimerTask task = new TimerTask() {
+    TimerTask task = new TimerTask() {
 
 
         @Override
         public void run() {
             if (connected == false) {
 
-                if(hostAvailabilityCheck() == true) {
+                if (hostAvailabilityCheck() == true) {
                     try {
 
-                    }
-                    catch (Exception ex)
-                    {
+                    } catch (Exception ex) {
 
-                    }
-
-                     finally {
+                    } finally {
                         splitPane.setDisable(false);
                     }
-                }
-                else if(hostAvailabilityCheck() == false)
-                {
+                } else if (hostAvailabilityCheck() == false) {
 
-                    try
-                    {
+                    try {
 
-                    }
-                    catch (Exception ex)
-                    {
+                    } catch (Exception ex) {
 
-                    }
-
-                    finally {
+                    } finally {
                         splitPane.setDisable(true);
                     }
 
@@ -128,20 +122,16 @@ public class LoginController implements Initializable {
         }
     };
 
-    public boolean hostAvailabilityCheck()
-    {
+    public boolean hostAvailabilityCheck() {
 
         boolean available = true;
         try {
-            if (connected == false)
-            {
+            if (connected == false) {
                 (s = new Socket(SERVER_ADDRESS, TCP_SERVER_PORT)).close();
             }
 
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             available = false;
             s = null;
         }
@@ -149,31 +139,30 @@ public class LoginController implements Initializable {
     }
 
     public void btnSignupAction(ActionEvent actionEvent) {
-            try {
-                Node node = (Node) actionEvent.getSource();
-                Stage stage = (Stage) node.getScene().getWindow();
-                stage.close();
-                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/register.fxml")));
+        try {
+            Node node = (Node) actionEvent.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+            Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/register.fxml")));
 
-                String pathName = "src/main/java/stylesheets/styles.css";
-                File file = new File(pathName);
-                if (file.exists()) {
-                    scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
-                } else {
-                    System.out.println("Could not find css file: "+pathName);
-                }
-
-                stage.setScene(scene);
-                stage.show();
-
-
-            } catch (IOException ex) {
-                System.err.println(ex.getMessage());
+            String pathName = "src/main/java/stylesheets/styles.css";
+            File file = new File(pathName);
+            if (file.exists()) {
+                scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
+            } else {
+                System.out.println("Could not find css file: " + pathName);
             }
 
+            stage.setScene(scene);
+            stage.show();
 
+
+        } catch (IOException ex) {
+            System.err.println(ex.getMessage());
         }
 
+
+    }
 
 
     @Override
@@ -182,8 +171,6 @@ public class LoginController implements Initializable {
 
         Timer timer = new Timer();
         timer.schedule(task, 01, 1000);
-
-
 
 
     }
@@ -199,7 +186,7 @@ public class LoginController implements Initializable {
         String status = "Success";
         String login = txtUsername.getText();
         String password = txtPassword.getText();
-        if(login.isEmpty() || password.isEmpty()) {
+        if (login.isEmpty() || password.isEmpty()) {
             setLblError(Color.TOMATO, "Puste znaki!");
             status = "Error";
         } else {
@@ -246,7 +233,7 @@ public class LoginController implements Initializable {
             if (file.exists()) {
                 scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
             } else {
-                System.out.println("Could not find css file: "+pathName);
+                System.out.println("Could not find css file: " + pathName);
             }
 
             stage.setScene(scene);

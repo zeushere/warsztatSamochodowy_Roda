@@ -3,7 +3,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -30,16 +29,12 @@ public class Main extends Application {
         if (file.exists()) {
             scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
         } else {
-            System.out.println("Could not find css file: "+pathName);
+            System.out.println("Could not find css file: " + pathName);
         }
 
 
         stage.setScene(scene);
         stage.show();
-
-
-
-
 
 
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {

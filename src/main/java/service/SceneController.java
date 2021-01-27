@@ -11,8 +11,7 @@ import java.io.IOException;
 public class SceneController {
 
 
-    public SceneController()
-    {
+    public SceneController() {
 
     }
 
@@ -23,13 +22,12 @@ public class SceneController {
         stage.getScene().setRoot(root);
 
 
-
         String pathName = "src/main/java/stylesheets/styles.css";
         File file = new File(pathName);
         if (file.exists()) {
             scene.getStylesheets().add(file.toURI().toURL().toExternalForm());
         } else {
-            System.out.println("Could not find css file: "+pathName);
+            System.out.println("Could not find css file: " + pathName);
         }
 
 

@@ -2,120 +2,143 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.MainController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="320.6000122070312" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="898.9999877929687" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="111.2" vgrow="ALWAYS" />
-    <RowConstraints minHeight="10.0" prefHeight="288.8" vgrow="ALWAYS" />
-  </rowConstraints>
-   <children>
-      <GridPane prefHeight="73.0" prefWidth="891.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-         <columnConstraints>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="73.8000244140625" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Button mnemonicParsing="false" onAction="#wlascicielTable" prefHeight="38.0" prefWidth="126.0" text="Właściciel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets bottom="30.0" />
-               </GridPane.margin>
-            </Button>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#uslugaTable" prefHeight="38.0" prefWidth="126.0" text="Usługa" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets bottom="30.0" />
-               </GridPane.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#naprawaTable" prefHeight="38.0" prefWidth="126.0" text="Naprawa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets bottom="30.0" />
-               </GridPane.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#mainMenu" prefHeight="38.0" prefWidth="143.0" text="Strona główna" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <GridPane.margin>
-                  <Insets bottom="30.0" />
-               </GridPane.margin>
-            </Button>
-         </children>
-      </GridPane>
-      <ImageView fitHeight="153.0" fitWidth="277.0" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
-         <image>
-            <Image url="@../img/sports-car-146873_1280.png" />
-         </image>
-         <GridPane.margin>
-            <Insets left="30.0" top="40.0" />
-         </GridPane.margin>
-      </ImageView>
-      <GridPane GridPane.rowIndex="1">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="76.0000099182129" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="71.00001220703125" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="0.0" prefHeight="77.19996337890626" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="61.200036621093716" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Label prefHeight="34.0" prefWidth="155.0" text="Wybierz działanie" GridPane.halignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets top="20.0" />
-               </GridPane.margin>
-            </Label>
-            <Button mnemonicParsing="false" onAction="#add" prefHeight="38.0" prefWidth="126.0" text="Dodawanie" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#del" prefHeight="38.0" prefWidth="128.0" text="Usuwanie" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="128.0" text="Aktualizacja" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-         </children>
-      </GridPane>
-      <GridPane fx:id="panelZawartosc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Label prefHeight="32.0" prefWidth="166.0" text="Strona główna" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-            </Label>
-            <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Aplikacja warsztatu samochodowego, to okienkowa aplikacja umożliwiająca pracę na bazie danych za pomocą wygodnego w obsłudze GUI. Za pośrednictwem aplikacji jesteśmy w stanie wykonywać na tabelach operacje dodawania, usuwania, aktualizowania oraz wyszukiwania rekordów. Aplikacja oparta jest na czterech tabelach: &quot;Usługa&quot;, &quot;Naprawa&quot;, &quot;Właściciel&quot;, które ściśle ze sobą powiązane, zapewniają odpowiednią normalizację danych." textAlignment="JUSTIFY" wrappingWidth="799.4890449643135" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-            </Text>
-         </children>
-      </GridPane>
-      <Separator maxWidth="4.0" minWidth="4.0" orientation="VERTICAL" prefHeight="269.0" prefWidth="4.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
-         <GridPane.margin>
-            <Insets bottom="20.0" />
-         </GridPane.margin>
-      </Separator>
-      <Separator minHeight="4.0" prefHeight="4.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-         <GridPane.margin>
-            <Insets left="30.0" right="30.0" top="70.0" />
-         </GridPane.margin>
-      </Separator>
-   </children>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+          prefWidth="1220.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="service.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="320.6000122070312"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="898.9999877929687"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="111.2" vgrow="ALWAYS"/>
+        <RowConstraints minHeight="10.0" prefHeight="288.8" vgrow="ALWAYS"/>
+    </rowConstraints>
+    <children>
+        <GridPane prefHeight="73.0" prefWidth="891.0" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                  GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="73.8000244140625" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button mnemonicParsing="false" onAction="#wlascicielTable" prefHeight="38.0" prefWidth="126.0"
+                        text="Właściciel" GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                        GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets bottom="30.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#uslugaTable" prefHeight="38.0"
+                        prefWidth="126.0" text="Usługa" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets bottom="30.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#naprawaTable" prefHeight="38.0" prefWidth="126.0"
+                        text="Naprawa" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                        GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets bottom="30.0"/>
+                    </GridPane.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#mainMenu" prefHeight="38.0" prefWidth="143.0"
+                        text="Strona główna" GridPane.columnIndex="3" GridPane.halignment="CENTER"
+                        GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets bottom="30.0"/>
+                    </GridPane.margin>
+                </Button>
+            </children>
+        </GridPane>
+        <ImageView fitHeight="153.0" fitWidth="277.0" pickOnBounds="true" GridPane.halignment="CENTER"
+                   GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+            <image>
+                <Image url="@../img/sports-car-146873_1280.png"/>
+            </image>
+            <GridPane.margin>
+                <Insets left="30.0" top="40.0"/>
+            </GridPane.margin>
+        </ImageView>
+        <GridPane GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="76.0000099182129" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="71.00001220703125" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="0.0" prefHeight="77.19996337890626" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="61.200036621093716" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label prefHeight="34.0" prefWidth="155.0" text="Wybierz działanie" GridPane.halignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets top="20.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Button mnemonicParsing="false" onAction="#add" prefHeight="38.0" prefWidth="126.0" text="Dodawanie"
+                        GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+                <Button mnemonicParsing="false" onAction="#del" prefHeight="38.0" prefWidth="128.0" text="Usuwanie"
+                        GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+                <Button mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="128.0"
+                        text="Aktualizacja" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+            </children>
+        </GridPane>
+        <GridPane fx:id="panelZawartosc" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                  GridPane.valignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label prefHeight="32.0" prefWidth="166.0" text="Strona główna" GridPane.halignment="CENTER"
+                       GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Label>
+                <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Aplikacja warsztatu samochodowego, to okienkowa aplikacja umożliwiająca pracę na bazie danych za pomocą wygodnego w obsłudze GUI. Za pośrednictwem aplikacji jesteśmy w stanie wykonywać na tabelach operacje dodawania, usuwania, aktualizowania oraz wyszukiwania rekordów. Aplikacja oparta jest na czterech tabelach: &quot;Usługa&quot;, &quot;Naprawa&quot;, &quot;Właściciel&quot;, które ściśle ze sobą powiązane, zapewniają odpowiednią normalizację danych."
+                      textAlignment="JUSTIFY" wrappingWidth="799.4890449643135" GridPane.halignment="CENTER"
+                      GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Text>
+            </children>
+        </GridPane>
+        <Separator maxWidth="4.0" minWidth="4.0" orientation="VERTICAL" prefHeight="269.0" prefWidth="4.0"
+                   GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets bottom="20.0"/>
+            </GridPane.margin>
+        </Separator>
+        <Separator minHeight="4.0" prefHeight="4.0" prefWidth="200.0" GridPane.columnIndex="1"
+                   GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                   GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets left="30.0" right="30.0" top="70.0"/>
+            </GridPane.margin>
+        </Separator>
+    </children>
 </GridPane>

@@ -1,6 +1,5 @@
 package service.deleteService;
 
-import service.SceneController;
 import connect.DbConnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
+import service.SceneController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -71,15 +71,12 @@ public class deleteUsluga implements Initializable {
                 SceneController sceneController = new SceneController(thisStage, thisScene);
 
             }
-        }catch (SQLException ex) {
+        } catch (SQLException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Musisz najpierw usunąć naprawę powiązaną z daną usługą!");
             alert.showAndWait();
-        }
-
-        catch (RuntimeException ex)
-        {
+        } catch (RuntimeException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Nie wybrano usługi do usunięcia!");

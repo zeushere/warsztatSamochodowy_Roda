@@ -60,7 +60,7 @@ public class NaprawaController implements Initializable {
                     "INNER JOIN wlasciciel ON naprawa.id_wlasciciela=wlasciciel.id_wlasciciela";
             connection = dbConnect.getConnection();
             ResultSet resultSet = connection.createStatement().executeQuery(select);
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Naprawa naprawa = new Naprawa();
                 naprawa.setId_naprawy(resultSet.getInt("id_naprawy"));
                 naprawa.setId_wlasciciela(resultSet.getString("id_wlasciciela"));
@@ -79,43 +79,29 @@ public class NaprawaController implements Initializable {
             naprawaWlasciciel.setCellValueFactory(new PropertyValueFactory<>("imie_nazwisko"));
             naprawaSamochod.setCellValueFactory(new PropertyValueFactory<>("marka_model"));
 
-            FilteredList<Naprawa> filteredData = new FilteredList<>(naprawy, b-> true);
+            FilteredList<Naprawa> filteredData = new FilteredList<>(naprawy, b -> true);
 
             filterField.textProperty().addListener(((observable, oldValue, newValue) -> {
-                filteredData.setPredicate(naprawa->{
-                    if(newValue == null || newValue.isEmpty())
-                    {
+                filteredData.setPredicate(naprawa -> {
+                    if (newValue == null || newValue.isEmpty()) {
                         return true;
                     }
 
                     String lowerCaseFilter = newValue.toLowerCase();
 
-                    if(naprawa.getMarka_model().toLowerCase().indexOf(lowerCaseFilter) != -1)
-                    {
+                    if (naprawa.getMarka_model().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                    else if(naprawa.getImie_nazwisko().toLowerCase().indexOf(lowerCaseFilter) != -1)
-                    {
+                    } else if (naprawa.getImie_nazwisko().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                    else if(naprawa.getUsluga_nazwa().toLowerCase().indexOf(lowerCaseFilter) != -1)
-                    {
+                    } else if (naprawa.getUsluga_nazwa().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                    else if(naprawa.getData_naprawy().toLowerCase().indexOf(lowerCaseFilter) != -1)
-                    {
+                    } else if (naprawa.getData_naprawy().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                    else if(naprawa.getImie_nazwisko().toLowerCase().indexOf(lowerCaseFilter) != -1)
-                    {
+                    } else if (naprawa.getImie_nazwisko().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-                    else if(naprawa.getKosztPLN().toLowerCase().indexOf(lowerCaseFilter) != -1)
-                    {
+                    } else if (naprawa.getKosztPLN().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                         return true;
-                    }
-
-                    else {
+                    } else {
                         return false;
                     }
                 });

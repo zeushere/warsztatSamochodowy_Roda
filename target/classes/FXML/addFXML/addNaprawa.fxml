@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.*?>
-
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.addService.addNaprawa">
-   <children>
-      <Pane prefHeight="400.0" prefWidth="470.0">
-         <children>
-            <ComboBox fx:id="naprawaSelectWlasciciel" layoutX="121.0" layoutY="59.0" prefWidth="150.0" />
-            <ComboBox fx:id="naprawaSelectUsluga" layoutX="121.0" layoutY="121.0" prefWidth="150.0" />
-            <DatePicker fx:id="naprawaData" layoutX="121.0" layoutY="250.0" promptText="dd.mm.rrrr">
-               <tooltip>
-                  <Tooltip text="Data nie może być z przeszłości!" />
-               </tooltip></DatePicker>
-            <Button layoutX="125.0" layoutY="293.0" mnemonicParsing="false" onAction="#naprawaAdd" text="Dodaj naprawę" />
-            <Text layoutX="123.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wlasciciel" />
-            <Text layoutX="130.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usługa" />
-            <Text layoutX="122.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-            <Text layoutX="125.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data naprawy" />
-            <Text layoutX="123.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koszt naprawy" />
-            <TextField fx:id="naprawaKoszt" layoutX="123.0" layoutY="181.0" />
-         </children>
-      </Pane>
-   </children>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="service.addService.addNaprawa">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="470.0">
+            <children>
+                <ComboBox fx:id="naprawaSelectWlasciciel" layoutX="121.0" layoutY="59.0" prefWidth="150.0"/>
+                <ComboBox fx:id="naprawaSelectUsluga" layoutX="121.0" layoutY="121.0" prefWidth="150.0"/>
+                <DatePicker fx:id="naprawaData" layoutX="121.0" layoutY="250.0" promptText="dd.mm.rrrr">
+                    <tooltip>
+                        <Tooltip text="Data nie może być z przeszłości!"/>
+                    </tooltip>
+                </DatePicker>
+                <Button layoutX="125.0" layoutY="293.0" mnemonicParsing="false" onAction="#naprawaAdd"
+                        text="Dodaj naprawę"/>
+                <Text layoutX="123.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wlasciciel"/>
+                <Text layoutX="130.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usługa"/>
+                <Text layoutX="122.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+                <Text layoutX="125.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data naprawy"/>
+                <Text layoutX="123.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koszt naprawy"/>
+                <TextField fx:id="naprawaKoszt" layoutX="123.0" layoutY="181.0"/>
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>
