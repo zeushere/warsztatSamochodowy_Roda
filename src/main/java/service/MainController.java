@@ -64,6 +64,9 @@ public class MainController{
 
     public void mainMenu(ActionEvent actionEvent) throws IOException {
 
+        gridPane = FXMLLoader.load(getClass().getResource("/FXML/main.fxml"));
+        wyswietl.getChildren().setAll(gridPane);
+
         Node node = (Node) actionEvent.getSource();
         stage = (Stage) node.getScene().getWindow();
         Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml")));
