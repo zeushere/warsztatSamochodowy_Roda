@@ -44,6 +44,8 @@ public class UslugaController implements Initializable {
         dbConnect = new DbConnect();
 
         usluga();
+
+        uslugaRodzaj.setEditable(false);
     }
 
     private void usluga() {

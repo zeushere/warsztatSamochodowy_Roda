@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="332.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.WlascicielController">
-   <children>
-      <TableView fx:id="wlascicielTable" layoutY="58" prefHeight="340.0" prefWidth="1010.0">
-        <columns>
-          <TableColumn fx:id="wlascicielImie" minWidth="180.59999084472656" prefWidth="211.999966442585" text="Imie wlaściciela" />
-          <TableColumn fx:id="wlascicielNazwisko" minWidth="140.79998779296875" prefWidth="236.80006408691406" text="Nazwisko właściciela" />
-            <TableColumn fx:id="wlascicielMarkaSamochodu" prefWidth="280.800048828125" text="Marka samochodu właściciela" />
-            <TableColumn fx:id="wlascicielModelSamochodu" prefWidth="279.20001220703125" text="Model samochodu właściciela" />
-        </columns>
-      </TableView>
-       <Pane layoutX="-1.0" prefHeight="59.0" prefWidth="1010.0">
-           <children>
-               <Text layoutX="260.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyszukiwarka:" />
-               <TextField fx:id="filterField" layoutX="414.0" layoutY="9.0" />
-           </children>
-       </Pane>
-   </children>
-</AnchorPane>
+<GridPane prefHeight="355.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.WlascicielController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="346.3999816894531" minHeight="0.0" prefHeight="0.0" valignment="CENTER" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="659.2" minHeight="10.0" prefHeight="355.19999999999993" valignment="CENTER" vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <TableView fx:id="wlascicielTable" maxHeight="899.0" maxWidth="850.0" minWidth="700.0" prefHeight="305.0" prefWidth="899.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="wlascicielImie" maxWidth="-1.0" minWidth="150.0" prefWidth="250.0" resizable="false" text="Imię właściciela" />
+                <TableColumn fx:id="wlascicielNazwisko" maxWidth="-1.0" minWidth="200.0" prefWidth="250.0" resizable="false" text="Nazwisko właściciela" />
+            <TableColumn fx:id="wlascicielMarkaSamochodu" maxWidth="-1.0" minWidth="250.0" prefWidth="250.0" text="Marka samochodu właściciela" />
+            <TableColumn fx:id="wlascicielModelSamochodu" maxWidth="-1.0" minWidth="250.0" prefWidth="250.0" text="Model samochodu właściciela" />
+            </columns>
+            <GridPane.margin>
+                <Insets left="30.0" top="50.0" />
+            </GridPane.margin>
+        </TableView>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wyszukiwarka:" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets left="30.0" />
+            </GridPane.margin>
+            <font>
+                <Font name="SansSerif Regular" size="36.0" />
+            </font>
+        </Text>
+        <TextField fx:id="filterField" alignment="CENTER" prefHeight="26.0" prefWidth="290.0" promptText="Wyszukaj" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets left="300.0" right="300.0" top="5.0" />
+            </GridPane.margin>
+        </TextField>
+    </children>
+</GridPane>

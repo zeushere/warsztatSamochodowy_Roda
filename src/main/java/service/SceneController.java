@@ -2,7 +2,7 @@ package service;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -11,8 +11,6 @@ import java.io.IOException;
 
 public class SceneController {
 
-    static Pane mainPane = new Pane();
-    static AnchorPane mainAnchorPane = new AnchorPane();
 
     public SceneController()
     {
@@ -21,9 +19,9 @@ public class SceneController {
 
     public SceneController(Stage stage, Scene scene) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("/FXML/main.fxml"));
-        AnchorPane anchorPane = fxmlLoader.load();
+        GridPane gridPane = fxmlLoader.load();
 
-        scene = new Scene(anchorPane);
+        scene = new Scene(gridPane);
 
         String pathName = "src/main/java/stylesheets/styles.css";
         File file = new File(pathName);
@@ -34,6 +32,7 @@ public class SceneController {
         }
 
         stage.setScene(scene);
+        stage.setMaximized(true);
         stage.show();
     }
 

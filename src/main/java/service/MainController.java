@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -18,53 +19,47 @@ public class MainController{
     @FXML
     private Stage stage;
     @FXML
-    private AnchorPane anchorPane;
+    private GridPane gridPane;
 
     @FXML
-    private Pane wyswietl;
+    private GridPane wyswietl;
 
-    @FXML
-    private Pane searchPane;
-
-    @FXML
-    private TextField searchTextField;
 
 
     public void uslugaTable(javafx.event.ActionEvent actionEvent) throws IOException {
 
-        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
-
+        gridPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
+        wyswietl.getChildren().setAll(gridPane);
 
     }
 
     public void wlascicielTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+        gridPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
+        wyswietl.getChildren().setAll(gridPane);
 
     }
 
     public void naprawaTable(javafx.event.ActionEvent actionEvent) throws IOException {
-        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+        gridPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
+        wyswietl.getChildren().setAll(gridPane);
 
     }
 
     public void update(javafx.event.ActionEvent actionEvent) throws IOException {
-        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateMenu.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+        gridPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateMenu.fxml"));
+        wyswietl.getChildren().setAll(gridPane);
 
     }
 
 
     public void add(ActionEvent actionEvent) throws IOException{
-        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addMenu.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+        gridPane = FXMLLoader.load(getClass().getResource("/FXML/add/addMenu.fxml"));
+        wyswietl.getChildren().setAll(gridPane);
     }
 
     public void del(ActionEvent actionEvent) throws IOException{
-        anchorPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
-        wyswietl.getChildren().setAll(anchorPane);
+        gridPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
+        wyswietl.getChildren().setAll(gridPane);
     }
 
     public void mainMenu(ActionEvent actionEvent) throws IOException {
