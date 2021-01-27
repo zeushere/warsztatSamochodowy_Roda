@@ -18,9 +18,9 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;;
 
@@ -45,7 +45,7 @@ public class LoginController implements Initializable {
     private Button btnSignup;
 
     @FXML
-    private AnchorPane anchorPane;
+    private SplitPane splitPane;
 
     private Connection connection;
     private DbConnect dbConnect;
@@ -104,7 +104,7 @@ public class LoginController implements Initializable {
                     }
 
                      finally {
-                        anchorPane.setDisable(false);
+                        splitPane.setDisable(false);
                     }
                 }
                 else if(hostAvailabilityCheck() == false)
@@ -120,7 +120,7 @@ public class LoginController implements Initializable {
                     }
 
                     finally {
-                        anchorPane.setDisable(true);
+                        splitPane.setDisable(true);
                     }
 
                 }
@@ -182,6 +182,9 @@ public class LoginController implements Initializable {
 
         Timer timer = new Timer();
         timer.schedule(task, 01, 1000);
+
+
+
 
     }
 

@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stylesheets/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/password.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
