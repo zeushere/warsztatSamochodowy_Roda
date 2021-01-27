@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane fx:id="splitPane" dividerPositions="0.5352657004830917" prefHeight="367.0" prefWidth="1037.0" style="-fx-border-color: white; -fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.del.delMenu">
+<SplitPane fx:id="splitPane" dividerPositions="0.5352657004830917" prefHeight="367.0" prefWidth="1037.0" style="-fx-border-color: white; -fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.deleteService.delMenu">
     <items>
         <GridPane alignment="CENTER" cache="true" depthTest="DISABLE" prefHeight="477.0" prefWidth="550.0">
             <columnConstraints>

@@ -1,4 +1,4 @@
-package service.del;
+package service.deleteService;
 
 import service.SceneController;
 import connect.DbConnect;
@@ -18,55 +18,53 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class delUsluga implements Initializable {
+public class delWlasciciel implements Initializable {
 
     @FXML
-    private ComboBox uslugaSelect;
+    private ComboBox wlascicielSelect;
 
     private Connection connection;
-    ArrayList listUsluga = new ArrayList();
+    ArrayList listWlasciciel = new ArrayList();
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        uslugaSelect();
-    }
+    public void initialize(URL location, ResourceBundle resources) { wlascicielSelect(); }
 
-    private void uslugaSelect() {
+    private void wlascicielSelect() {
         try {
             DbConnect dbConnect = new DbConnect();
             connection = dbConnect.getConnection();
-            String query = "SELECT *,CONCAT(nazwa_uslugi,' | ',rodzaj_uslugi)as ImNa FROM usluga";
+            String query = "SELECT *,CONCAT(imie_wlasciciela,' ',nazwisko_wlasciciela,' ',marka_samochodu_wlasciciela,' ',model_samochodu_wlasciciela)as ImNa FROM wlasciciel";
             ResultSet rs = connection.createStatement().executeQuery(query);
             while (rs.next()) {
-                uslugaSelect.getItems().add(rs.getString("ImNa"));
-                listUsluga.add(rs.getInt("id_uslugi"));
+                wlascicielSelect.getItems().add(rs.getString("ImNa"));
+                listWlasciciel.add(rs.getInt("id_wlasciciela"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
 
-    public void uslugaDel(ActionEvent actionEvent) throws IOException {
+    public void wlascicielDel(ActionEvent actionEvent) throws IOException {
         try {
-            int id = (int) listUsluga.get(uslugaSelect.getSelectionModel().getSelectedIndex());
+            int id = (int) listWlasciciel.get(wlascicielSelect.getSelectionModel().getSelectedIndex());
             DbConnect dbConnect = new DbConnect();
             connection = dbConnect.getConnection();
-            String query = "DELETE FROM usluga WHERE id_uslugi=" + id;
+            String query = "DELETE FROM wlasciciel WHERE id_wlasciciela=" + id;
             int ex = connection.createStatement().executeUpdate(query);
             if (ex > 0) {
-                uslugaSelect();
+
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Informacja");
                 alert.setHeaderText("Pomyślnie wykonano polecenie!");
                 alert.showAndWait();
 
-                listUsluga.clear();
-                uslugaSelect.getItems().clear();
+                listWlasciciel.clear();
+                wlascicielSelect.getItems().clear();
+                wlascicielSelect();
 
-
-                Stage thisStage = (Stage) uslugaSelect.getScene().getWindow();
-                Scene thisScene = uslugaSelect.getScene();
+                Stage thisStage = (Stage) wlascicielSelect.getScene().getWindow();
+                Scene thisScene = wlascicielSelect.getScene();
 
                 SceneController sceneController = new SceneController(thisStage, thisScene);
 
@@ -74,7 +72,7 @@ public class delUsluga implements Initializable {
         }catch (SQLException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
-            alert.setHeaderText("Musisz najpierw usunąć naprawę powiązaną z daną usługą!");
+            alert.setHeaderText("Musisz najpierw usunąć naprawę powiązaną z danym właścicielem!");
             alert.showAndWait();
         }
 
@@ -82,10 +80,9 @@ public class delUsluga implements Initializable {
         {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
-            alert.setHeaderText("Nie wybrano usługi do usunięcia!");
+            alert.setHeaderText("Nie wybrano właściciela do usunięcia!");
             alert.showAndWait();
         }
-
     }
 
 
