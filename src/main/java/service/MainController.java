@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
@@ -14,6 +15,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class MainController{
 
@@ -22,6 +25,7 @@ public class MainController{
 
     @FXML
     private Scene scene;
+
 
     @FXML
     private GridPane gridPane;
@@ -72,14 +76,22 @@ public class MainController{
 
 
         Node node = (Node) actionEvent.getSource();
+
+
+
         stage = (Stage) node.getScene().getWindow();
-
-
-
         scene=(Scene) node.getScene();
 
 
-        scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/main.fxml")));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/main.fxml"));
+
+        Parent root = fxmlLoader.load();
+        stage.getScene().setRoot(root);
+
+
+
+
+
         String pathName = "src/main/java/stylesheets/styles.css";
         File file = new File(pathName);
         if (file.exists()) {
@@ -89,14 +101,9 @@ public class MainController{
         }
 
 
-        stage.setScene(scene);
-
-
-
-
-
         stage.show();
 
 
     }
+
 }

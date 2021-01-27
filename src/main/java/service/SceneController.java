@@ -1,9 +1,8 @@
 package service;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -18,10 +17,12 @@ public class SceneController {
     }
 
     public SceneController(Stage stage, Scene scene) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("/FXML/main.fxml"));
-        GridPane gridPane = fxmlLoader.load();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/main.fxml"));
 
-        scene = new Scene(gridPane);
+        Parent root = fxmlLoader.load();
+        stage.getScene().setRoot(root);
+
+
 
         String pathName = "src/main/java/stylesheets/styles.css";
         File file = new File(pathName);
@@ -31,8 +32,7 @@ public class SceneController {
             System.out.println("Could not find css file: "+pathName);
         }
 
-        stage.setScene(scene);
-        stage.setMaximized(true);
+
         stage.show();
     }
 
