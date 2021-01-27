@@ -4,81 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/NaprawaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/NaprawaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UslugaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UslugaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/WlascicielController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WlascicielController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/deleteService/deleteNaprawa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/deleteService/deleteNaprawa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/deleteService/deleteUsluga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/deleteService/deleteUsluga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/deleteService/deleteWlasciciel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/deleteService/deleteWlasciciel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/updateService/updateNaprawa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/updateService/updateNaprawa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/updateService/updateUsluga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/updateService/updateUsluga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/updateService/updateWlasciciel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/updateService/updateWlasciciel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stylesheets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stylesheets/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addNaprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/addFXML/addWlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteNaprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/deleteFXML/deleteWlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/naprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/naprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/password.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateNaprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/updateFXML/updateWlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/usluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/usluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/wlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/wlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/addFXML/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/addFXML/addMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/addFXML/addNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/addFXML/addNaprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/addFXML/addUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/addFXML/addUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/addFXML/addWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/addFXML/addWlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteNaprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/deleteFXML/deleteWlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/naprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/naprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/password.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateNaprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/updateFXML/updateWlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/usluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/usluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/wlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/wlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoginController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/NaprawaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/NaprawaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PasswordController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PasswordController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/RegisterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/RegisterController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/SceneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/UslugaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/UslugaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/WlascicielController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/WlascicielController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/deleteService/deleteNaprawa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/deleteService/deleteNaprawa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/deleteService/deleteUsluga.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/deleteService/deleteUsluga.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/deleteService/deleteWlasciciel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/deleteService/deleteWlasciciel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/updateService/updateUsluga.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/updateService/updateUsluga.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/updateService/updateWlasciciel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/updateService/updateWlasciciel.class" afterDir="false" />
-    </list>
+    <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +64,7 @@
       <recent name="config.add" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JAR Application.warsztatSamochodowy_Roda.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="warsztatSamochodowy_Roda" />
@@ -157,8 +83,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="warsztatSamochodowy_Roda.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/warsztatSamochodowy_Roda_jar/warsztatSamochodowy_Roda.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.warsztatSamochodowy_Roda.jar" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
