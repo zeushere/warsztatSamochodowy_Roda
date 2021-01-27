@@ -1,4 +1,4 @@
-package service.add;
+package service.addService;
 
 import service.SceneController;
 import connect.DbConnect;
@@ -34,7 +34,7 @@ public class addNaprawa implements Initializable {
     private Connection connection;
     private ArrayList listWlasciciel = new ArrayList();
     private ArrayList listUsluga = new ArrayList();
-    
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         naprawaSelectWlasciciel();
@@ -73,7 +73,7 @@ public class addNaprawa implements Initializable {
     }
 
 
-    public void naprawaAdd(ActionEvent actionEvent) throws SQLException{
+    public void naprawaAdd(ActionEvent actionEvent) throws SQLException {
 
 
         DbConnect dbConnect = new DbConnect();
@@ -122,9 +122,7 @@ public class addNaprawa implements Initializable {
                 alert.setHeaderText("Data nie może być z przeszłości!");
                 alert.showAndWait();
             }
-        }
-
-        catch (Exception ex){
+        } catch (Exception ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd!");
             alert.setHeaderText("Uzupełnij wszystkie pola!");
@@ -132,5 +130,5 @@ public class addNaprawa implements Initializable {
         }
     }
 
-    
+
 }

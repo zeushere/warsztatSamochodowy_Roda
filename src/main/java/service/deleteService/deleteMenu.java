@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
-public class delMenu {
+public class deleteMenu {
     @FXML
     private Pane pane;
 

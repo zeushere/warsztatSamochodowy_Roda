@@ -1,4 +1,4 @@
-package service.update;
+package service.updateService;
 
 import service.SceneController;
 import connect.DbConnect;

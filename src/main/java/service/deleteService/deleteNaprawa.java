@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class delNaprawa implements Initializable {
+public class deleteNaprawa implements Initializable {
 
     @FXML
     private ComboBox naprawaSelect;

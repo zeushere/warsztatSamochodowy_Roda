@@ -18,7 +18,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class delWlasciciel implements Initializable {
+public class deleteWlasciciel implements Initializable {
 
     @FXML
     private ComboBox wlascicielSelect;

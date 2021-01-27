@@ -1,4 +1,4 @@
-package service.update;
+package service.updateService;
 
 import service.SceneController;
 import connect.DbConnect;
@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;

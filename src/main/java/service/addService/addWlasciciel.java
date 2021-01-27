@@ -1,4 +1,4 @@
-package service.add;
+package service.addService;
 
 import service.SceneController;
 import connect.DbConnect;
@@ -26,17 +26,18 @@ public class addWlasciciel {
 
 
     private Connection connection;
+
     public void addWlasciciel(ActionEvent actionEvent) throws SQLException, IOException {
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
         if (!(wlascicielAddImie.getText().equals("")) && !(wlascicielAddNazwisko.getText().equals("")) && !(wlascicielAddMarkaSamochodu.getText().equals("")) && !(wlascicielAddModelSamochodu.getText().equals(""))) {
             String query = "INSERT INTO wlasciciel(imie_wlasciciela, nazwisko_wlasciciela, marka_samochodu_wlasciciela, model_samochodu_wlasciciela) VALUES('"
-                    +wlascicielAddImie.getText()+"','"
-                    +wlascicielAddNazwisko.getText()+"','"
-                    +wlascicielAddMarkaSamochodu.getText()+"','"
-                    +wlascicielAddModelSamochodu.getText() +"')";
+                    + wlascicielAddImie.getText() + "','"
+                    + wlascicielAddNazwisko.getText() + "','"
+                    + wlascicielAddMarkaSamochodu.getText() + "','"
+                    + wlascicielAddModelSamochodu.getText() + "')";
             int execute = connection.createStatement().executeUpdate(query);
-            if (execute>0) {
+            if (execute > 0) {
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Informacja");

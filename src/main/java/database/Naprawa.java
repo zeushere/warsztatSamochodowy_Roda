@@ -18,28 +18,28 @@ public class Naprawa {
     private String id_wlasciciela;
     @Column(name = "id_uslugi")
     private String id_uslugi;
-    @Column(name = "un")
-    private String un;
-    @Column(name = "wimnw")
-    private String wimnw;
-    @Column(name = "wmamo")
-    private String wmamo;
+    @Column(name = "usluga_nazwa")
+    private String usluga_nazwa;
+    @Column(name = "imie_nazwisko")
+    private String imie_nazwisko;
+    @Column(name = "marka_model")
+    private String marka_model;
     @Column(name = "kosztPLN")
     private String kosztPLN;
 
-    public Naprawa(){
+    public Naprawa() {
 
     }
 
-    public Naprawa(int id_naprawy, String koszt_naprawy, String data_naprawy, String id_wlasciciela, String id_uslugi, String un, String wimnw, String wmamo, String kosztPLN) {
+    public Naprawa(int id_naprawy, String koszt_naprawy, String data_naprawy, String id_wlasciciela, String id_uslugi, String usluga_nazwa, String imie_nazwisko, String marka_model, String kosztPLN) {
         this.id_naprawy = id_naprawy;
         this.koszt_naprawy = koszt_naprawy;
         this.data_naprawy = data_naprawy;
         this.id_wlasciciela = id_wlasciciela;
         this.id_uslugi = id_uslugi;
-        this.un = un;
-        this.wimnw = wimnw;
-        this.wmamo = wmamo;
+        this.usluga_nazwa = usluga_nazwa;
+        this.imie_nazwisko = imie_nazwisko;
+        this.marka_model = marka_model;
         this.kosztPLN = kosztPLN;
     }
 
@@ -84,28 +84,28 @@ public class Naprawa {
     }
 
 
-    public String getWimnw() {
-        return wimnw;
+    public String getImie_nazwisko() {
+        return imie_nazwisko;
     }
 
-    public void setWimnw(String wimnw) {
-        this.wimnw = wimnw;
+    public void setImie_nazwisko(String imie_nazwisko) {
+        this.imie_nazwisko = imie_nazwisko;
     }
 
-    public String getWmamo() {
-        return wmamo;
+    public String getMarka_model() {
+        return marka_model;
     }
 
-    public void setWmamo(String wmamo) {
-        this.wmamo = wmamo;
+    public void setMarka_model(String marka_model) {
+        this.marka_model = marka_model;
     }
 
-    public String getUn() {
-        return un;
+    public String getUsluga_nazwa() {
+        return usluga_nazwa;
     }
 
-    public void setUn(String un) {
-        this.un = un;
+    public void setUsluga_nazwa(String usluga_nazwa) {
+        this.usluga_nazwa = usluga_nazwa;
     }
 
 
@@ -125,9 +125,9 @@ public class Naprawa {
                 ", data_naprawy='" + data_naprawy + '\'' +
                 ", id_wlasciciela='" + id_wlasciciela + '\'' +
                 ", id_uslugi='" + id_uslugi + '\'' +
-                ", un='" + un + '\'' +
-                ", wimnw='" + wimnw + '\'' +
-                ", wmamo='" + wmamo + '\'' +
+                ", usluga_nazwa='" + usluga_nazwa + '\'' +
+                ", imie_nazwisko='" + imie_nazwisko + '\'' +
+                ", marka_model='" + marka_model + '\'' +
                 ", kosztPLN='" + kosztPLN + '\'' +
                 '}';
     }

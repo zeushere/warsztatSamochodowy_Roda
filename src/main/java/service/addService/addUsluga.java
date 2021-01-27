@@ -1,4 +1,4 @@
-package service.add;
+package service.addService;
 
 import service.SceneController;
 import connect.DbConnect;
@@ -26,12 +26,12 @@ public class addUsluga {
     public void addUsluga(ActionEvent actionEvent) throws SQLException, IOException {
         DbConnect dbConnect = new DbConnect();
         connection = dbConnect.getConnection();
-        if (!(uslugaAddNazwa.getText().equals("")) && !(uslugaAddRodzaj.getText().equals("")) ) {
+        if (!(uslugaAddNazwa.getText().equals("")) && !(uslugaAddRodzaj.getText().equals(""))) {
             String query = "INSERT INTO usluga(nazwa_uslugi, rodzaj_uslugi) VALUES('"
-                    +uslugaAddNazwa.getText()+"','"
-                    +uslugaAddRodzaj.getText()+"')";
+                    + uslugaAddNazwa.getText() + "','"
+                    + uslugaAddRodzaj.getText() + "')";
             int execute = connection.createStatement().executeUpdate(query);
-            if (execute>0) {
+            if (execute > 0) {
 
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);

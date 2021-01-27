@@ -7,16 +7,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class MainController{
 
@@ -31,44 +26,44 @@ public class MainController{
     private GridPane gridPane;
 
     @FXML
-    private GridPane wyswietl;
+    private GridPane panelZawartosc;
 
 
 
     public void uslugaTable(javafx.event.ActionEvent actionEvent) throws IOException {
 
         gridPane = FXMLLoader.load(getClass().getResource("/FXML/usluga.fxml"));
-        wyswietl.getChildren().setAll(gridPane);
+        panelZawartosc.getChildren().setAll(gridPane);
 
     }
 
     public void wlascicielTable(javafx.event.ActionEvent actionEvent) throws IOException {
         gridPane = FXMLLoader.load(getClass().getResource("/FXML/wlasciciel.fxml"));
-        wyswietl.getChildren().setAll(gridPane);
+        panelZawartosc.getChildren().setAll(gridPane);
 
     }
 
     public void naprawaTable(javafx.event.ActionEvent actionEvent) throws IOException {
         gridPane = FXMLLoader.load(getClass().getResource("/FXML/naprawa.fxml"));
-        wyswietl.getChildren().setAll(gridPane);
+        panelZawartosc.getChildren().setAll(gridPane);
 
     }
 
     public void update(javafx.event.ActionEvent actionEvent) throws IOException {
-        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/update/updateMenu.fxml"));
-        wyswietl.getChildren().setAll(splitPane);
+        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/updateFXML/updateMenu.fxml"));
+        panelZawartosc.getChildren().setAll(splitPane);
 
     }
 
 
     public void add(ActionEvent actionEvent) throws IOException{
-        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/add/addMenu.fxml"));
-        wyswietl.getChildren().setAll(splitPane);
+        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/addFXML/addMenu.fxml"));
+        panelZawartosc.getChildren().setAll(splitPane);
     }
 
     public void del(ActionEvent actionEvent) throws IOException{
-        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/del/delMenu.fxml"));
-        wyswietl.getChildren().setAll(splitPane);
+        SplitPane splitPane = FXMLLoader.load(getClass().getResource("/FXML/deleteFXML/deleteMenu.fxml"));
+        panelZawartosc.getChildren().setAll(splitPane);
     }
 
     public void mainMenu(ActionEvent actionEvent) throws IOException {

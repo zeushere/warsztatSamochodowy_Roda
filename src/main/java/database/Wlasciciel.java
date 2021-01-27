@@ -20,7 +20,7 @@ public class Wlasciciel {
     private String model_samochodu_wlasciciela;
 
 
-    public Wlasciciel(){
+    public Wlasciciel() {
     }
 
     public Wlasciciel(int id_wlasciciela, String imie_wlasciciela, String nazwisko_wlasciciela, String marka_samochodu_wlasciciela, String model_samochodu_wlasciciela) {

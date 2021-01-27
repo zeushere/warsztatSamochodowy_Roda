@@ -52,10 +52,10 @@ public class NaprawaController implements Initializable {
     private void naprawa() {
         try {
             naprawy = FXCollections.observableArrayList();
-            String select = "SELECT *, CONCAT(usluga.nazwa_uslugi) as un, " +
+            String select = "SELECT *, CONCAT(usluga.nazwa_uslugi) as usluga_nazwa, " +
                     "naprawa.data_naprawy, CONCAT(naprawa.koszt_naprawy, ' zł') as kosztPLN, " +
-                    "CONCAT(wlasciciel.imie_wlasciciela,' ',wlasciciel.nazwisko_wlasciciela) as wimnw, " +
-                    "CONCAT(wlasciciel.marka_samochodu_wlasciciela,' ',wlasciciel.model_samochodu_wlasciciela) as wmamo " +
+                    "CONCAT(wlasciciel.imie_wlasciciela,' ',wlasciciel.nazwisko_wlasciciela) as imie_nazwisko, " +
+                    "CONCAT(wlasciciel.marka_samochodu_wlasciciela,' ',wlasciciel.model_samochodu_wlasciciela) as marka_model " +
                     "FROM naprawa INNER JOIN usluga ON naprawa.id_uslugi=usluga.id_uslugi " +
                     "INNER JOIN wlasciciel ON naprawa.id_wlasciciela=wlasciciel.id_wlasciciela";
             connection = dbConnect.getConnection();
@@ -64,20 +64,20 @@ public class NaprawaController implements Initializable {
                 Naprawa naprawa = new Naprawa();
                 naprawa.setId_naprawy(resultSet.getInt("id_naprawy"));
                 naprawa.setId_wlasciciela(resultSet.getString("id_wlasciciela"));
-                naprawa.setUn(resultSet.getString("un"));
+                naprawa.setUsluga_nazwa(resultSet.getString("usluga_nazwa"));
                 naprawa.setData_naprawy(resultSet.getString("data_naprawy"));
                 naprawa.setKosztPLN(resultSet.getString("kosztPLN"));
-                naprawa.setUn(resultSet.getString("un"));
-                naprawa.setWimnw(resultSet.getString("wimnw"));
-                naprawa.setWmamo(resultSet.getString("wmamo"));
+                naprawa.setUsluga_nazwa(resultSet.getString("usluga_nazwa"));
+                naprawa.setImie_nazwisko(resultSet.getString("imie_nazwisko"));
+                naprawa.setMarka_model(resultSet.getString("marka_model"));
                 naprawy.add(naprawa);
             }
 
-            naprawaNazwaUslugi.setCellValueFactory(new PropertyValueFactory<>("un"));
+            naprawaNazwaUslugi.setCellValueFactory(new PropertyValueFactory<>("usluga_nazwa"));
             naprawaDataNaprawy.setCellValueFactory(new PropertyValueFactory<>("data_naprawy"));
             naprawaKosztNaprawy.setCellValueFactory(new PropertyValueFactory<>("kosztPLN"));
-            naprawaWlasciciel.setCellValueFactory(new PropertyValueFactory<>("wimnw"));
-            naprawaSamochod.setCellValueFactory(new PropertyValueFactory<>("wmamo"));
+            naprawaWlasciciel.setCellValueFactory(new PropertyValueFactory<>("imie_nazwisko"));
+            naprawaSamochod.setCellValueFactory(new PropertyValueFactory<>("marka_model"));
 
             FilteredList<Naprawa> filteredData = new FilteredList<>(naprawy, b-> true);
 
@@ -90,15 +90,15 @@ public class NaprawaController implements Initializable {
 
                     String lowerCaseFilter = newValue.toLowerCase();
 
-                    if(naprawa.getWmamo().toLowerCase().indexOf(lowerCaseFilter) != -1)
+                    if(naprawa.getMarka_model().toLowerCase().indexOf(lowerCaseFilter) != -1)
                     {
                         return true;
                     }
-                    else if(naprawa.getWimnw().toLowerCase().indexOf(lowerCaseFilter) != -1)
+                    else if(naprawa.getImie_nazwisko().toLowerCase().indexOf(lowerCaseFilter) != -1)
                     {
                         return true;
                     }
-                    else if(naprawa.getUn().toLowerCase().indexOf(lowerCaseFilter) != -1)
+                    else if(naprawa.getUsluga_nazwa().toLowerCase().indexOf(lowerCaseFilter) != -1)
                     {
                         return true;
                     }
@@ -106,7 +106,7 @@ public class NaprawaController implements Initializable {
                     {
                         return true;
                     }
-                    else if(naprawa.getWimnw().toLowerCase().indexOf(lowerCaseFilter) != -1)
+                    else if(naprawa.getImie_nazwisko().toLowerCase().indexOf(lowerCaseFilter) != -1)
                     {
                         return true;
                     }

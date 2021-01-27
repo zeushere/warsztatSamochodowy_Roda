@@ -1,4 +1,4 @@
-package service.add;
+package service.addService;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,27 +14,27 @@ public class addMenu {
     private Pane pane;
 
     public void usluga(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addUsluga.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/addFXML/addUsluga.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
     public void wlasciciel(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addWlasciciel.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/addFXML/addWlasciciel.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
     public void naprawa(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addNaprawa.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/addFXML/addNaprawa.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
     public void egzemplarz(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addEgzemplarz.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/addFXML/addEgzemplarz.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 
     public void wypozyczenia(ActionEvent actionEvent) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/add/addWypozyczenia.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/FXML/addFXML/addWypozyczenia.fxml"));
         pane.getChildren().setAll(anchorPane);
     }
 }
