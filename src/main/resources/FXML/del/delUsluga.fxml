@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.del.delUsluga">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.del.delUsluga">
    <children>
       <Pane prefHeight="400.0" prefWidth="400.0">
          <children>
             <ComboBox fx:id="uslugaSelect" layoutX="125.0" layoutY="79.0" prefWidth="150.0" />
             <Text layoutX="124.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz usługę do usunięcia" />
-            <Button layoutX="125.0" layoutY="130.0" mnemonicParsing="false" onAction="#uslugaDel" text="Usuń" />
+            <Button layoutX="125.0" layoutY="130.0" mnemonicParsing="false" onAction="#uslugaDel" text="Usuń usługę" />
          </children>
       </Pane>
    </children>

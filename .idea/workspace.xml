@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="819dddd7-fa04-412c-ad50-22ee85e73db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addNaprawa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/add/addWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/add/addWlasciciel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delNaprawa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delNaprawa.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delUsluga.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/update/updateUsluga.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/update/updateUsluga.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/del/delWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/del/delWlasciciel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/update/updateWlasciciel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/update/updateWlasciciel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
